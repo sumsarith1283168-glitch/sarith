@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+ <!-- <link rel="stylesheet" href="./first_project.css"> -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer&display=swap" rel="stylesheet">
+</head>
+<style>
+body{
+  font-family: 'Noto Sans Khmer', sans-serif;
+  min-height: 100vh;
+}
+
+@media (max-width: 576px){
+
+  .box1-wrap{
+    flex-direction: column !important;
+    height: auto !important;
+  }
+
+  .group-1{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .group-1 > .item{
+    width: 50%;
+  }
+
+  .small-box{
+    flex-direction: column !important;
+  }
+
+  .small-box .img{
+    width: 100% !important;
+    height: 70px;
+  }
+
+  .small-box .text{
+    width: 100% !important;
+    height: auto;
+  }
+  
+}
+
+.box{
+  transition: 0.4s;
+}
+.box img:hover{
+  transform: scale(0.98);
+  color: #000;
+}
+.desktop-menu {
+    display: block;
+}
+.mobile-menu {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    .desktop-menu {
+        display: none; /* hide desktop menu */
+    }
+    .mobile-menu {
+        display: block; /* show mobile menu */
+    }
+}
+
+.topbar{
+    height:70px;
+    background:black;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+   
+    
+}
+
+.menu-btn{
+    position:absolute;
+    left:15px;
+    font-size:25px;
+    color:white;
+    cursor:pointer;
+}
+
+
+.menu-box{
+    position:fixed; 
+    top:60px;
+    left:0;
+    width:100%;
+    background:red;
+    z-index:9999;
+    max-height:0;
+    overflow:hidden;
+    transition:0.4s ease;
+}
+
+.menu-box.show{
+    max-height:290px;
+}
+
+.menu-item{
+    padding:15px;
+    color:white;
+    display:block;
+    text-decoration:none;
+}
+.hover{
+  transition: 0.4s;
+}
+.hover img:hover{
+  transform: scale(0.98);
+  color: #000;
+}
+.mobile-menu a:hover{
+  background-color: rgb(88, 11, 11);
+}
+</style>
+</style>
+<body>
+    <section class="desktop-menu w-100">
+  <div class="w-100 bg-black py-2">
+    <img src="https://news.sabay.com.kh/img/logo.png" class="ms-5" style="width: 100px; height: 100px;">
+  </div>
+  <div class="w-100 bg-danger">
+    <div class="d-flex align-items-center gap-4 p-3 ms-5">
+      <a href="./first_project.html" class="text-white text-decoration-none"data-target><i class="bi bi-house-door-fill"></i></a>
+      <a href="./part1_project.html" class="text-white text-decoration-none"data-target>កម្សាន្ត</a>
+      <a href="#" class="text-white text-decoration-none"data-targrt>បច្ចេកវិទ្យា</a>
+      <a href="./part3_project.html" class="text-white text-decoration-none"data-target>ជីវិតនិងសង្គម</a>
+      <a href="./part4_project.html" class="text-white text-decoration-none"data-target>កីឡា</a>
+      <a href="#" class="text-white text-decoration-none"data-target>AUTO TALK</a>
+    </div>
+  </div>
+</section>
+<div class="mobile-menu">
+  <div class="topbar">
+      <div class="menu-btn" onclick="toggleMenu()">☰</div>
+      <img src="https://news.sabay.com.kh/img/logo.png" style="width: 50px;height: 50px;">
+  </div>
+
+  <div id="menu" class="menu-box">
+      <a href="./first_project.html" class="menu-item"><i class="bi bi-house-door-fill"></i></a>
+      <a href="./part1_project.html" class="menu-item">កម្សាន្ត</a>
+      <a href="#" class="menu-item">បច្ចេកវិទ្យា</a>
+      <a href="./part3_project.html" class="menu-item">ជីវិតនិងសង្គម</a>
+      <a href="./part4_project.html" class="menu-item">កីឡា</a>
+      <a href="#" class="menu-item">AUTO TALK</a>
+  </div>
+</div>
+
+
+
+
+        <div class="container-fluid"style=" width: 95%;margin-top:15px;">
+  <div class="row">
+    <div class="col-lg-8 " style="box-shadow: 1px 1px  2px 1px rgb(167, 163, 163);">
+
+      <div class="d-flex gap-3 box1-wrap " style="height:300px; ">
+        
+        <div class="flex-fill d-flex flex-column box bg-dark">
+          <div style="height:70%;">
+            <img src="https://bizkhmer.com/storage/articles/BiNT3Tgz4OxjrVbP7rtfDxY4MgM8mX703W4L4zKR.jpeg"
+            style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div style="height:30%; background-color:#fff;"><h6>ក្នុងយុគសម័យបច្ចេកវិទ្យា​ AI ​ឬបញ្ញាសម្បនិម្មិត ធ្វើឲ្យមនុស្សជាច្រើនមានការភ័យខ្លាច ខ្លាចមនុស្សយន្តកាន់កាប់ការងាររបស់មនុស្ស ដែលអាចបង្កឲ្យមនុស្សជាច្រើនបាត់បង់ការងារ។</h6></div>
+        </div>
+
+        <div class="flex-fill d-flex flex-column box bg-dark">
+          <div style="height:70%;">
+            <img src="https://s.rfi.fr/media/display/d8fab0ac-0073-11eb-9016-005056a98db9/w:1024/p:16x9/121211212ee1e2d2e12e21.jpg"
+            style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div style="height:30%;background-color:#fff;"><p>បទល្មើសបច្ចេកវិទ្យានៅតែជាកង្វល់សម្រាប់បុគ្គល និងបណ្តាស្ថាប័ន នានានៅជុំវិញពិភពលោក។ តាមរយ:របាយការណ៍កាសែត Cybercrime Magazine បង្ហាញថាបទល្មើសបច្ចេកវិទ្យាបានបំផ្លាញ</p></div>
+        </div>
+
+      </div>
+
+      <div class="group-1 mt-2">
+
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://newsroomcambodia.com/wp-content/uploads/2024/03/Cover-Picture.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>Voxpop៖ ទស្សនៈយុវជនលើការប្រើបច្ចេកវិទ្យាជំនួយ​ដល់​ការ​សិក្សា | Newsroom Cambodia</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://static.information.gov.kh/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBd2NHQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--ed8167aaebd4e80cfdbb004b7f03a1b206b3e0b9/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNT1RBd2VEWXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--70cbddbba2e46c7ca8ac0c1f8b8316d88752e16d/photo_2020-05-30_22-43-46.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>ក្រៅពីទទួលបានការហូបចុកគ្រប់គ្រាន់ អាហារូបត្ថម្ភ ការកម្សាន្ត និងសិទ្ធិពេញលេញឯទៀតស្របតាមច្បាប់រដ្ឋធម្មនុញ្ញ នៃព្រះរាជាណាចក្រកម្ពុជា ក៏ដូចជាបទដ្ឋានសិទ្ធិមនុស្ស សន្ធិសញ្ញា</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://s3.ams.com.kh/education/2023/07/Tech_cover-scaled.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>
+ភាពរីកចម្រើននៃបច្ចេកវិទ្យា មានឥទ្ធិពលយ៉ាងធំធេង ក្នុងការបង្កើតឱ្យមានភាពរីកចម្រើន និងដំណោះស្រាយឆ្លាតវៃ សម្រាប់វិបត្តិធំៗ ដែលកំពុងកើតមានក្នុងពិភពលោក។ ទន្ទឹមនឹងល្បឿន នៃការរីចម្រើនយ៉ាងឆាប់រហ័សនៃបច្ចេកវិទ្យា</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://cnc.com.kh/news/laravel-filemanager/photos/30/6444b9a1ebed2.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>(បច្ចេកវិទ្យា)៖ ក្នុងមួយរយៈពេលចុងក្រោយមកនេះ ចរន្តបច្ចេកវិទ្យាបានបោះពួយយ៉ាងលឿន ដែលស្ទើរតែបត់មិនទាន់របស់មនុស្សនៅក្នុងពិភពលោកយើងនេះ។</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://cdn.cambonomist.com/media/images/10_dImXsTO.2e16d0ba.fill-960x504.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>តើការងារជិត ៤០% សម្រាប់មនុស្សជាតិទូទាំងពិភពលោកអាចនឹងរលាយបាត់ដោយសារបច្ចេកវិទ្យា AIឬយ៉ាងណា? បច្ចេកវិទ្យា AI ឬ បញ្ញាសិប្បនិម្មិតបានបង្កក្តីបារម្ភកាន់តែខ្លាំង</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://cdn.cambonomist.com/media/images/tmltphsrphkhnrbskrmhn_Apple_kndl4t.2e16d0ba.fill-960x540.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>តម្លៃទីផ្សារភាគហ៊ុនរបស់ក្រុមហ៊ុន Apple បានកើនឡើងដល់៤ទ្រីលានដុល្លារជាលើកដំបូងកាលពីថ្ងៃទី២៨ ខែតុលា ក្រោយតម្រូវការសម្រាប់ម៉ូដែលទូរសព្ទ iPhone ថ្មីមានការកើន</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDCDvGKQXe4ZtyGABG74ruR0auJM2-YHLYbg&s" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>កាលពីថ្មីៗកន្លងទៅនេះ ក្រុមហ៊ុន Apple បានប្រាប់ឱ្យអ្នកប្រើប្រាស់ iPhone ទាំងអស់បើអាចប្រញាប់អាប់ដេត iOS 18.5 ឱ្យបានឆាប់តាមដែលអាចទៅបាន ដើម្បីចៀសវាកុំឱ្យពួក Hacker អាចចូលលួចទិន្នន័យ</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://secudemy.com/wp-content/uploads/2024/01/Modern-CCTV-camera-on-a-wall-780x470.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>វិធីសាស្រ្តការពារប្រព័ន្ធកាមេរ៉ាសុវត្ថិភាព – SecuDemy.com</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://www.camcert.gov.kh/wp-content/uploads/2020/03/Secure-Internet-Connected-Cameras.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>នាពេលថ្មីៗនេះ The United Kingdom (UK) National Cyber Security Centre (NCSC) បានចេញការណែនាំអំពីការការពារសុវត្ថិភាពលើកាមេរ៉ាសុវត្ថិភាព (IP camera) ដែលអាចភ្ជាប់អ៊ិនធឺណិតមានដូចជា smart security cameras និង baby monitors</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMr-x_mLbuPB11nQ0cZdDiwaIzxE9KB_Zcmg&s" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>ការផ្តល់សេវាបណ្តាញ និងហេដ្ឋារចនាសម្ព័ន្ធប្រព័ន្ធទាំងអស់ រួមបញ្ចូលទាំងម៉ាស៊ីនបម្រើទិន្នន័យ បម្រុងទុកទិន្នន័យ និងបណ្តាញសុវត្ថិភាព។</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://refile.tnaot.com/image/2019/08/15/a9ffbbaa2b6e40bba67a6be545e9a204.jpg?x-oss-process=image/watermark,image_RS5wbmc_eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsUF8yMA" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>ប្រទេសវៀតណាម បានបង្ហាញពីមហិច្ឆតារបស់ខ្លួន នឹងបង្កើតឲ្យមានក្រុមហ៊ុនបច្ចេកវិទ្យាតម្លៃ៥ពាន់លានដុល្លារ (Unicorns) យ៉ាងហោចណាស់ឲ្យបាន៥ ក្រុមហ៊ុននៅឆ្នាំ២០២៥ និង១០ ក្រុមហ៊ុននៅត្រឹមឆ្នាំ២០៣០ ខាងមុខ។</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRUatNonE41POV7ZWEVEVsiw1a68WQFBRg1Q&s" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>កម្មវិធី បដិវត្តន៍ឧស្សាហកម្ម ៤.០ | ភាគ ០៥, #Cambodia4point0 #AMS #ប្រជាជនសកល</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://khmernote.com.kh/wp-content/uploads/2022/11/S6.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>ទីក្រុងបាងកក ថ្ងៃទី 14 ខែវិច្ឆិកា ឆ្នាំ 2022៖ ក្រុមហ៊ុន Tan Chong International Limited និងក្រុមហ៊ុនបុត្រសម្ព័ន្ធ Motor Image រួមជាមួយនឹងក្រុមហ៊ុន Subaru រួមគ្នាបង្ហាញរថយន្ត Forester ថ្មីដែលបានដំឡើងនៅក្នុងប្រទេសថៃជាមួយនឹង EyeSight 4.0 ដែលនឹងត្រូវដាក់</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIQZtPk2bQs3q-7JanNyMfhR_bKUsF_RCWcQ&s" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>ប្រព័ន្ធផ្សព្វផ្សាយមកពីទីផ្សារប្រទេស កម្ពុជា ម៉ាឡេស៊ី វៀតណាម និងប្រទេសថៃស្ថិតនៅក្នុងទីក្រុងបាងកក ដើម្បីទទួលយកបទពិសោធន៍រថយន្ត SUV ដ៏អស្ចារ្យនៅផ្លូវ Pathumthani Speedway និងទស្សនារោងចក្រ Tan Chong Subaru Automotive Thailand (TCSAT) ដែល</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmbtup7Wbd1P0Gjc0_EPI9BvjIpueu1OmVwA&s" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>វេទិកាកម្ពុជា ៤.០ លើកទី ៣ ស្តីពី បច្ចេកវិទ្យាហិរញ្ញវត្ថុនៅកម្ពុជា(អាគារផ្សារមូលប័ត្រកម្ពុជា) នារសៀលថ្ងៃសុក្រ ៦ រោច ខែអាសាឍ ឆ្នាំរោង ឆស័ក ពុទ្ធសករាជ</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://vstatic.vietnam.vn/vietnam/resource/IMAGE/2025/2/22/66d13c4f545e4d9684a6651cec697a77" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>ការអភិវឌ្ឍប្រព័ន្ធមជ្ឈមណ្ឌលបណ្តុះបណ្តាលទេពកោសល្យសម្រាប់បច្ចេកវិទ្យាឧស្សាហកម្ម ៤.០។</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://www.khmersme.gov.kh/wp-content/uploads/2025/12/t2-edited.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>តាម​ផែន​ការ​នៃ​ក្របខណ្ឌគោលនយោបាយ សេដ្ឋកិច្ច​ និង​សង្គម​ឌីជីថល​កម្ពុជា​ឆ្នាំ ២០២១-២០៣៥ ការ​កសាង​សេដ្ឋកិច្ច និង​សង្គម​ឌីជីថល​រស់រវើក​ អាច​ធ្វើ​ទៅ​បាន គឺ​ចាំ​បាច់​ត្រូវ​រៀប​ចំ​មូលដ្ឋាន​គ្រឹះ​ជំរុញ​ការ​ទទួល​យក និង​បរិវត្តកម្មឌីជីថល​នៅ​ក្នុង​គ្រប់​តួ​អង្គ​សង្គម ទាំង​</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH2_uZ296Vx76BDcPD3kLN-wyijeW0kKNRlg&s" style="width: 100%;height: 100%;"></div>
+            <div class="text" style="width:70%;height:150px;"><h6>បណ្ឌិត ម៉ី កន្យាណ ប្រធានក្រុមប្រឹក្សាភិបាល សាកលវិទ្យាល័យភូមិន្ទភ្នំពេញ (RUPP) នៅថ្ងៃទី១៤ ខែតុលា ឆ្នាំ២០២១នេះ បានគូសបញ្ជាក់ថា យុទ្ធសាស្ត្រអប់រំ STEM និងការស្រាវជ្រាវអភិវឌ្ឍន៍ឧស្សាហកម្ម៤.០ នឹងជំរុញឲ្យកម្ពុជាក្លាយជាប្រទេស មានចំណូលមធ្យមកម្រិតខ្ពស់។</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://sgp1.digitaloceanspaces.com/newsasiacloud/2025/02/Si8wzUCA-60.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>ឯកឧត្តម ម៉ុល វិបុល ចូលរួមវគ្គបណ្តុះបណ្តាលស្តីពី «Singapore Skills Transformation 4.0» នៅវិទ្យាស្ថានអប់រំបណ្ដុះបណ្ដាលបច្ចេកទេស (ITE) នៃប្រទេសសិង្ហបុរី</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQscQGGkOxyTmX7FBDsHZK7CkPgK3oIcYhfvQ&s" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>អ្វីជាឧស្សាហកម្ម ៤.០ និងមានសារសំខាន់អ្វីខ្លះ? - បច្ចេកវិទ្យា</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://i.ytimg.com/vi/rWTdVjyQ95w/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBrm8HRh9LRWHleUeaM2DFndcg4PQ" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>នាឡិការឆ្លាត តំលៃ ៧០ដុល្លា មានអេក្រង់ AMOLED ពន្លឺ១ពាន់នីត ថ្មកាន់បានជាង១០ថ្ងៃ imiki SF1
+</h6>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcXDkzbouy75cjYBx55qEeZ347RygCxEWhdw&s" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>កន្លងមក Technology Cambodia ធ្លាប់បានណែនាំពី App ប្រើបច្ចេកវិទ្យា AR អាចឱ្យយើងលស្បែងជើងតាមទូរស័ព្ទបាន។ ស្រដៀងគ្នានេះដែរ ថ្ងៃនេះយើងនឹងនាំ App មួយទៀតមកឱ្យលោកអ្នកស្គាល់ គឺ App លនាឡិកា ថា</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://s3.ams.com.kh/education/2024/03/blockchain-for-online-payments-and-money-transacti-2023-11-27-05-12-50-utc-1024x693.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>
+បច្ចេកវិទ្យា Blockchain កំពុងទទួលបានការចាប់អារម្មណ៍ខ្លាំង នៅតាមបណ្ដាសាកលវិទ្យាល័យល្បីៗរបស់ពិភពលោក ។ បច្ចេកវិទ្យានេះ គឺជាយន្តការមូលដ្ឋានទិន្នន័យកម្រិតខ្ពស់ </h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://m.media-amazon.com/images/I/61hhA5-dIzL._AC_SL1500_.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>នាឡិកាឌីជីថល Peakeep ដំណើរការដោយថ្ម, នាឡិការោទិ៍សម្រាប់បន្ទប់គេង - ឥតខ្សែ លេខធំ 4 ឧបករណ៍បញ្ជាពន្លឺ</h6></div>
+          </div>
+        </div>
+        
+        
+      </div>
+      
+
+     
+    </div>
+
+   
+    <div class="col-lg-4 d-none d-md-block">
+      <div  style="height:900px;">
+         <div class="row h-100">
+                     <div class="d-flex flex-column gap-2">
+                        <div class="d-flex  p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREA1fdb46h5WxfNw1rdNeT2UvJH4Ktxk1hcw&s"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>មជ្ឈមណ្ឌលបច្ចេកវិទ្យាសហគមន៍ ពង្រឹងសមត្ថភាពជំនាញឌីជីថលដល់អ្នកជនបទ</h6>
+                         </div>
+
+                        </div>
+                        <div class="d-flex  p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvZTpgTefBO8cZhLl3FKB6-uMLXdRvf2d3mQ&s"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>ហេតុអ្វីគួរជ្រើសរើសរៀនជំនាញពាក់ព័ន្ធបច្ចេកវិទ្យាឌីជីថល? - សុីសុីថាមស៍</h6>
+                       </div>
+                       </div>
+
+
+                          <div class="d-flex p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0Alx4OcME_7lLP72uHVrJsFN3EX4N2bRXTQ&s"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>បច្ចេកវិទ្យាសំខាន់ៗចំនួន៥ កំពុងជួយដោះស្រាយបញ្ហាពិភពលោកនៅ</h6></div>
+                        </div>
+
+                        <div class="d-flex  p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJpQQEFf7URAOyDPJJoxorwgDvU_pCqWVx_A&s"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div style="width: 80%; height: 50px;"><h6>បច្ចេកវិទ្យាចិននាំឱ្យមានការផ្លាស់ប្តូរសេដ្ឋកិច្ចរបស់ខ្លួនជាខ្លាំង - សុីសុីថាមស៍</h6></div>
+                        </div>
+
+                        <div class="d-flex  p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScFP1rGZEwp2SJZZW_WU8u3KBAbr1xwzjiGg&s"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>តើវិស័យឧស្សាហកម្មរបស់ចិន មានស្ថានភាពបែបណា ក្រោយរងសម្ពាធពាណិជ្ជកម្មពីបស្ចិមប្រទេស? — Cambonomist</h6>
+                       </div>
+                       </div>
+                          <div class="d-flex  p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://cdn.cc-times.com/kh.cc-times.com/media/34770/large/362182104_668757891944304_6408535836613560147_n.jpg?1689905771"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>គ្រូបង្រៀនកម្ពុជា៤០រូបទទួលបានវគ្គបណ្ដុះបណ្ដាល«ការប្រើប្រាស់បច្ចេកវិទ្យាព័ត៌មាន» - សុីសុីថាមស៍</h6></div>
+                        </div>
+
+
+                        <div class="d-flex  p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb1vcIGF2WNlQ1aInxDMkiM5VXno-obNN8Jw&s"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>កម្ពុជា នឹងចូលរួមពិព័រណ៌តាំងបង្ហាញបច្ចេកវិទ្យាថ្មី នៅប្រទេសចិន</h6></div>
+                        </div>
+
+
+                        <div class="d-flex p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtPUbp0CJ03VadmwEFXDeMQehz0H612oS8xA&s"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>ពិព័រណ៍យន្តហោះ និងបច្ចេកវិទ្យា រយៈពេល ២ ថ្ងៃ ទាក់ទាញសិស្សានុសិស្ស-និស្សិត និងសាធារណជន ច្រើន</h6></div>
+                        </div>
+
+
+                        <div class="d-flex p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlf08VDCXATIhQjn377eUCY0MyN89YUGFhwA&s"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>ពិព័រណ៍យន្តហោះនិងបច្ចេកវិទ្យាលើកដំបូងនៅកម្ពុជា កំពុងទាក់ចិត្តយុវវ័យ - CNC News</h6></div>
+                        </div>
+
+
+                        <div class="d-flex  p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRK5RPCTUTxnZvkQHjidjjHxmlf6As2c4aU_w&s"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>ពិព័រណ៍យន្តហោះនិងបច្ចេកវិទ្យាលើកដំបូងនៅកម្ពុជា កំពុងទាក់ចិត្តយុវវ័យ - CNC News</h6></div>
+                        </div>
+
+
+                        <div class="d-flex  p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://cdn.cambonomist.com/media/images/dl644pnlndllrnchhnn.2e16d0ba.fill-960x540.jpg"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>ការចំណាយលើ AI ទូទាំងពិភពលោកនឹងកើនដល់៦៤៤ពាន់លានដុល្លារនៅឆ្នាំនេះ — Cambonomist</h6></div>
+                        </div>
+
+
+                        <div class="d-flex  p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgjQsieAIAGFASynvWIRdR3qXj5QsiTHuRfg&s"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>បច្ចេកវិទ្យាសំខាន់ចំនួន5ដែលជួយឲ្យមនុស្សមានភាពងាយស្រួលក្នុងការរស់នៅ</h6></div>
+                        </div>
+
+                    
+                </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+<div class="container-fluid footer" style="height:380px; background:#000;color: #fff; margin-top:2%;">
+  <div class="row h-100">
+    <div class="col-lg-4 col-12 d-flex flex-column justify-content-center align-items-center">
+      <img src="./photo_2026-04-03_09-57-54.jpg" style="max-width:130px;">
+      <h6>© រក្សាសិទ្ធគ្រប់យ៉ាងដោយSabay ឆ្នាំ២០២៦ <br> គោលការណ៍ភាព| Privacy Policy  <br><br>
+         អាសយដ្ធាន <br> អគ្គាលេខ ៣០៨ មហាវិថីព្រះមុន្នីវង្ស <br>
+        សង្កាតបឹងរាំង ខណ្ឌដូនពេញ</h6>
+    </div>
+  
+     <div class=" col-lg-4  d-none d-lg-flex justify-content-center align-items-center text-white text-center ">
+      <div>
+        <h5>អំពីយើង</h5>
+        <h6>Sabay Digital Corporation ជាក្រុមហុនព័ត៏មានឌីជីថល <br> និនកម្សាន្តឈានមុខគេ នៅកម្ពុជា ។ ព័ត៏មានបន្ថែម <br>
+        ផលិតផល និង សេវាកម្ម របស់Sabay</h6>
+        <img src="https://news.sabay.com.kh/img/logo.png"style="width: 40px;height: 40px;">
+        <img src="https://media-src.sabay.com/mysabay_user/logo_picture/1764651755559-pm31sd9.png"style="width: 40px;height: 40px;">
+        <img src="https://kleykley.sabay.com.kh/img/logo.png"style="width: 40px;height: 40px;">
+        <img src="https://der.sabay.com.kh/img/logo.png"style="width: 40px;height: 40px;">
+        <img src="https://cdn.sabay.com/cdn/media.sabay.com/media/publications/logos/61d5007946e0b_1641349200_small.png"style="width: 40px;height: 40px;">
+        <img src="https://cdn.sabay.com/cdn/media.sabay.com/media/publications/logos/61d501f25761a_1641349560_small.png"style="width: 40px;height: 40px;">
+        <img src="https://cdn.sabay.com/cdn/media.sabay.com/media/publications/logos/61d50338ea098_1641349920_small.png"style="width: 40px;height: 40px;">
+        <img src="https://business.sabay.com.kh/img/logo.png"style="width: 40px;height: 40px;">
+        <img src="https://cdn.sabay.com/cdn/media.sabay.com/media/publications/logos/61d4f62a95ade_1641346560_small.png"style="width: 40px;height: 40px;">
+      </div>
+    </div>
+    <div class="col-lg-4 col-12 d-flex justify-content-center align-items-center text-white text-center">
+      <div>
+       <h5>ជួបគ្នានៅបណ្ដាញសង្គម</h5>
+       <h6>ទំនាក់ទំនង</h6>
+       <i class="bi bi-facebook"></i>
+       <i class="bi bi-youtube"></i>
+       <i class="bi bi-instagram"></i>
+       <i class="bi bi-tiktok"></i>
+       <i class="bi bi-telegram"></i>
+       <h6>info@sabay.com</h6>
+       <h6>023 228 000</h6>
+      </div>
+    </div>
+
+  </div>
+</div>
+<script>
+  function toggleMenu(){
+    document.getElementById("menu").classList.toggle("show");
+}
+</script>
+</body>
+</html>

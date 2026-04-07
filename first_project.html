@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Slide</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="./first_project.css">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer&display=swap" rel="stylesheet">
+<!-- <link rel="stylesheet" href="./first_project.js"> -->
+
+
+</head>
+<body>
+<section class="desktop-menu w-100">
+  <div class="w-100 bg-black py-2">
+    <img src="https://news.sabay.com.kh/img/logo.png" class="ms-5" style="width: 100px; height: 100px;">
+  </div>
+  <div class="w-100 bg-danger">
+    <div class="d-flex align-items-center gap-4 p-3 ms-5">
+      <a href="#" class="text-white text-decoration-none"data-target><i class="bi bi-house-door-fill"></i></a>
+      <a href="./part1_project.html" class="text-white text-decoration-none"data-target>កម្សាន្ត</a>
+      <a href="./part2_project.html" class="text-white text-decoration-none"data-targrt>បច្ចេកវិទ្យា</a>
+      <a href="./part3_project.html" class="text-white text-decoration-none"data-target>ជីវិតនិងសង្គម</a>
+      <a href="./part4_project.html" class="text-white text-decoration-none"data-target>កីឡា</a>
+      <a href="#" class="text-white text-decoration-none"data-target>AUTO TALK</a>
+    </div>
+  </div>
+</section>
+
+<div class="mobile-menu">
+  <div class="topbar">
+      <div class="menu-btn" onclick="toggleMenu()">☰</div>
+      <img src="https://news.sabay.com.kh/img/logo.png" style="width: 50px;height: 50px;">
+  </div>
+
+  <div id="menu" class="menu-box">
+      <a href="#" class="menu-item"><i class="bi bi-house-door-fill"></i></a>
+      <a href="./part1_project.html" class="menu-item">កម្សាន្ត</a>
+      <a href="./part2_project.html" class="menu-item">បច្ចេកវិទ្យា</a>
+      <a href="./part3_project.html" class="menu-item">ជីវិតនិងសង្គម</a>
+      <a href="./part4_project.html" class="menu-item">កីឡា</a>
+      <a href="#" class="menu-item">AUTO TALK</a>
+  </div>
+</div>
+
+
+
+
+<div class="container h-600 position-relativet">
+ 
+  <button class="btn-slide prev" onclick="prevSlide()"><</button>
+  <button class="btn-slide next" onclick="nextSlide()">></button>
+
+  <div class="row h-100 g-3 scroll-container" id="slider">
+    <div class="col-12 desktop-layout">
+      <div class="row h-100 g-2">
+
+        <div class="col-9 d-flex flex-column">
+          <div class="row flex-grow-1 g-1">
+            <div class="col-6 bg-black box">
+                <div class="box1  hover" >
+                            <img src="https://www.khmertimeskh.com/wp-content/uploads/2024/05/82736.jpg" style="width: 100%; height:100% ;">
+                            <div class="dark"></div>
+                            <div class="part bg-danger">ជីវិតនិងសង្គម</div>
+                            <h5>ផលិតផល​ភូមិ​ខ្មែរ​នឹង​ត្រូវ​បាន​ដាក់​តាំង​ពិព័រណ៍​រយៈពេល​ពីរ​ថ្ងៃ</h5>
+                           <span>​ក្រសួង​កសិកម្ម​ ​រុក្ខា​ប្រមាញ់​ ​និង​នេសាទ​ ​កំពុង​រៀបចំ​ពិព័រណ៍​កសិកម្ម​រយៈពេល​ពីរ​ថ្ងៃ​ ​ដែល​មានឈ្មោះ​ថា​ “​ភូមិ​កសិផល​ខ្មែរ​” ​និង​វេទិកា​ស្តីពី​ “​រសជាតិ​កសិផល​” ​ចាប់ពី​ថ្ងៃ​ទី​ ​១​-​២​ ​ខែ​មិថុនា​ ​ដែល​មាន​គោលបំណង​បង្ហាញ​ការ​យកចិត្តទុកដាក់​លើ​វិ​ស័យ​កសិកម្ម​នៅ​កម្ពុជា​ ​និង​ភ្ជាប់​អ្នកប្រើប្រាស់​ជាមួយនឹង​ផលិតផល​ដែល​ដាំ​ដុះ​ ​និង​ផលិត​ដោយ​កសិករ​ក្នុងស្រុក​។​​</span>
+                            <div class="date">ព្រឹកមិញ ម៉ោង 11:15ព្រឹក</div>
+                        </div>
+            </div>
+            <div class="col-6 bg-black box">
+              <div class="box1 hover" >
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuSNhKoCo1u2fEW8UdQ9MqIA4khWae9jCN8A&s" style="width: 100%; height:100% ;">
+                            <div class="dark"></div>
+                            <div class="part bg-success">កម្សាន្ត</div>
+                            <h5>ការដើរកម្សាន្តផ្តល់ភាពរីករាយបានយូរជាង ការទិញសម្ភារៈពេញនិយម</h5>
+                           <span>តាម​លទ្ធផល​ស្រាវជ្រាវ​របស់​​អ្នក​វិទ្យាសាស្រ្ត​បាន​បង្ហាញ​ថា ដំណើរ​កម្សាន្ត​បាន​ជួយ​​ឲ្យ​មនុស្ស​ ដិត​ជាប់​ភាព​សប្បាយ​រីក​រាយ​ក្នុង​ចិត្ត​បាន​យូរ​ បើ​ប្រៀប​ធៀប​ទៅ​នឹង​ ការ​​ចំណាយ​លុយ​ទៅ​ដេញ​តាម​ សម្ភារៈ​ទំនើប ទាន់​សម័យ​កាល។</span>
+                            <div class="date">ព្រឹកមិញ ម៉ោង 11:15ព្រឹក</div>
+                        </div>
+            </div>
+          </div>
+          <div class="row flex-grow-1 g-1">
+            <div class="col-6 bg-black box">
+                       <div class="box1 hover" >
+                            <img src="https://business-cambodia.com/cms/assets/7f6eaff8-dbb2-4000-9d8b-0e286fb163ed?format=webp"style="width: 100%; height:100% ;">
+                            <div class="dark"></div>
+                            <div class="part bg-info">បច្ចេកវិទ្យា</div>
+                            <h5>របត់ថ្មី! បច្ចេកវិទ្យាចំនួន៥នេះ នឹងអាចចូលមកផ្លាស់ប្តូរ​ របៀបរស់នៅរបស់មនុស្ស នៅ៣០ឆ្នាំខាងមុខ</h5>
+                           <span>ក្រុមហ៊ុនអាកាសចរណ៍ AirAsia Cambodia ពង្រីកបន្ថែមជើងហោះហើរត្រង់ទៅកាន់ទីក្រុងសិង្ហបុរី ដែលជាការពង្រឹងការតភ្ជាប់ជើងហោះហើរអន្តរជាតិក្នុងសហគមន៍អាស៊ាន</span>
+                            <div class="date">ព្រឹកមិញ ម៉ោង 11:15ព្រឹក</div>
+                        </div>
+                      </div>
+            <div class="col-6 bg-black box">
+                        <div class="box1 hover" >
+                            <img src="https://kptmedia.ap-south-1.linodeobjects.com/2026/02/image-1064-1024x683.png" style="width: 100%; height:100% ;">
+                            <div class="dark"></div>
+                            <div class="part  bg-warning">កីឡា</div>
+                            <h5>ភ្នំពេញក្រោន មានប្រៀបកីឡាករបរទេសលើព្រះខ័នរាជស្វាយរៀង មុនជួបគ្នាពាន ACGL</h5>
+                           <span>ការចុះឈ្មោះកីឡាករសម្រាប់ប្រជែងពាន ACGL វគ្គចាញ់ធ្លាក់ បានបិទបញ្ចប់ជាផ្លូវការហើយ កាលពីថ្ងៃទី ១៨ ខែ កុម្ភៈ ឆ្នាំ ២០២៦។ គិតត្រឹមពេលនេះ ព្រះខ័នរាជស្វាយរៀង មានកីឡាករបរទេសចំនួន ៨ នាក់។ ចំណែក ភ្នំពេញក្រោន វិញ មានសមាសភាពកីឡាករបរទេសលើស ៣ នាក់ ពោលគឺមានសរុបដល់ ១១ នាក់។</span>
+                            <div class="date">ព្រឹកមិញ ម៉ោង 11:15ព្រឹក</div>
+                        </div>
+                      </div>
+          </div>
+        </div>
+
+        <div class="col-3 d-flex flex-column">
+          <div class="box flex-fill bg-secondary"></div>
+          <div class="box flex-fill bg-secondary mt-1"></div>
+        </div>
+
+      </div>
+    </div>
+
+   
+    <div class="scroll-item mobile-slide ">
+       <div class="box1 hover" >
+                            <img src="https://www.khmertimeskh.com/wp-content/uploads/2024/05/82736.jpg" style="width: 100%; height:100% ;">
+                            <div class="dark"></div>
+                            <div class="part bg-danger">ជីវិតនិងសង្គម</div>
+                            <h5>ផលិតផល​ភូមិ​ខ្មែរ​នឹង​ត្រូវ​បាន​ដាក់​តាំង​ពិព័រណ៍​រយៈពេល​ពីរ​ថ្ងៃ</h5>
+                           <span>​ក្រសួង​កសិកម្ម​ ​រុក្ខា​ប្រមាញ់​ ​និង​នេសាទ​ ​កំពុង​រៀបចំ​ពិព័រណ៍​កសិកម្ម​រយៈពេល​ពីរ​ថ្ងៃ​ ​ដែល​មានឈ្មោះ​ថា​ “​ភូមិ​កសិផល​ខ្មែរ​” ​និង​វេទិកា​ស្តីពី​ “​រសជាតិ​កសិផល​” ​ចាប់ពី​ថ្ងៃ​ទី​ ​១​-​២​ ​ខែ​មិថុនា​ ​ដែល​មាន​គោលបំណង​បង្ហាញ​ការ​យកចិត្តទុកដាក់​លើ​វិ​ស័យ​កសិកម្ម​នៅ​កម្ពុជា​ ​និង​ភ្ជាប់​អ្នកប្រើប្រាស់​ជាមួយនឹង​ផលិតផល​ដែល​ដាំ​ដុះ​ ​និង​ផលិត​ដោយ​កសិករ​ក្នុងស្រុក​។​​</span>
+                            <div class="date">ព្រឹកមិញ ម៉ោង 11:15ព្រឹក</div>
+                        </div>
+    </div>
+    <div class="scroll-item mobile-slide ">
+      <div class="box1 hover" >
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuSNhKoCo1u2fEW8UdQ9MqIA4khWae9jCN8A&s"style="width: 100%; height:100% ;">
+                            <div class="dark"></div>
+                            <div class="part bg-success">កម្សាន្ត</div>
+                            <h5>ការដើរកម្សាន្តផ្តល់ភាពរីករាយបានយូរជាង ការទិញសម្ភារៈពេញនិយម</h5>
+                           <span>តាម​លទ្ធផល​ស្រាវជ្រាវ​របស់​​អ្នក​វិទ្យាសាស្រ្ត​បាន​បង្ហាញ​ថា ដំណើរ​កម្សាន្ត​បាន​ជួយ​​ឲ្យ​មនុស្ស​ ដិត​ជាប់​ភាព​សប្បាយ​រីក​រាយ​ក្នុង​ចិត្ត​បាន​យូរ​ បើ​ប្រៀប​ធៀប​ទៅ​នឹង​ ការ​​ចំណាយ​លុយ​ទៅ​ដេញ​តាម​ សម្ភារៈ​ទំនើប ទាន់​សម័យ​កាល។</span>
+                            <div class="date">ព្រឹកមិញ ម៉ោង 11:15ព្រឹក</div>
+                        </div>
+    </div>
+    <div class="scroll-item mobile-slide ">
+       <div class="box1 hover" >
+                            <img src="https://business-cambodia.com/cms/assets/7f6eaff8-dbb2-4000-9d8b-0e286fb163ed?format=webp" style="width: 100%; height:100% ;">
+                            <div class="dark"></div>
+                            <div class="part bg-info">បច្ចេកវិទ្យា</div>
+                            <h5>របត់ថ្មី! បច្ចេកវិទ្យាចំនួន៥នេះ នឹងអាចចូលមកផ្លាស់ប្តូរ​ របៀបរស់នៅរបស់មនុស្ស នៅ៣០ឆ្នាំខាងមុខ</h5>
+                           <span>ក្រុមហ៊ុនអាកាសចរណ៍ AirAsia Cambodia ពង្រីកបន្ថែមជើងហោះហើរត្រង់ទៅកាន់ទីក្រុងសិង្ហបុរី ដែលជាការពង្រឹងការតភ្ជាប់ជើងហោះហើរអន្តរជាតិក្នុងសហគមន៍អាស៊ាន</span>
+                            <div class="date">ព្រឹកមិញ ម៉ោង 11:15ព្រឹក</div>
+                        </div>
+    </div>
+    <div class="scroll-item mobile-slide ">
+      <div class="box1 hover" >
+                            <img src="https://kptmedia.ap-south-1.linodeobjects.com/2026/02/image-1064-1024x683.png" style="width: 100%; height:100% ;">
+                            <div class="dark"></div>
+                            <div class="part  bg-warning">កីឡា</div>
+                            <h5>ភ្នំពេញក្រោន មានប្រៀបកីឡាករបរទេសលើព្រះខ័នរាជស្វាយរៀង មុនជួបគ្នាពាន ACGL</h5>
+                           <span>ការចុះឈ្មោះកីឡាករសម្រាប់ប្រជែងពាន ACGL វគ្គចាញ់ធ្លាក់ បានបិទបញ្ចប់ជាផ្លូវការហើយ កាលពីថ្ងៃទី ១៨ ខែ កុម្ភៈ ឆ្នាំ ២០២៦។ គិតត្រឹមពេលនេះ ព្រះខ័នរាជស្វាយរៀង មានកីឡាករបរទេសចំនួន ៨ នាក់។ ចំណែក ភ្នំពេញក្រោន វិញ មានសមាសភាពកីឡាករបរទេសលើស ៣ នាក់ ពោលគឺមានសរុបដល់ ១១ នាក់។</span>
+                            <div class="date">ព្រឹកមិញ ម៉ោង 11:15ព្រឹក</div>
+                        </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="container ">
+  <div class="header-bar">
+    
+    <div class="red-shape">
+      វីដេអូ
+      <i class="bi bi-chevron-right"></i>
+    </div>
+
+  </div>
+</div>
+<div class="container ">
+  <div class="row">
+    <div class="col-12">
+
+      <div class=" text-white main-bg  head-box">
+
+        <!-- Wrapper -->
+        <div class="mobile-row">
+
+          <!-- Inner Box 1 -->
+          <div class="mb-1 box-item" style="height: 350px;">
+            <div class=" h-100 p-1">
+              <div class="row h-100 g-4 big-box">
+                <div class="col-4  h-100 ">
+                  <div class="col-12  h-70 hover" style="height: 70%; width: 100%;"><img src="https://s9.kh1.co/__image/w=650,h=434,q=100/35/351ea783f4f4d90a0c840d3400149612b7fd7cf1.jpg" style="width: 100%; height:100%;"></div>
+                  <div class="col-12  h-30" style="height: 30%;width: 100%;"><h5 style="color: black;">ប្រជាពលរដ្ឋខ្មែរ និងភ្ញៀវទេសចរបរទេសយ៉ាងច្រើនកុះករ បានចូលរួមទស្សនាពិធីដង្ហែក្បួនព្រះមហាក្សត្រសម័យអង្គរដ៏អស្ចារ្យ នៅប្រាសាទអង្គរវត្តនៃព្រឹត្តិការណ៍ “ស្នាមញញឹមនៃកម្ពុជា”</h5></div>
+                </div>
+                <div class="col-4 b h-100">
+                  <div class="col-12  h-70 hover" style="height: 70%; width: 100%;"><img src="https://s9.kh1.co/41/4185c6a9563a6f9b36cdacb67c83b7aa9a164355.jpeg" style="width: 100%;height: 100%;"></div>
+                  <div class="col-12  h-30" style="height: 30%;width: 100%;"><h5 style="color: black;">ភ្ញៀវទេសចរប្រមាណជាង៤ម៉ឺននាក់ បានទៅកម្សាន្ត នៅក្នុងព្រឹត្តិការណ៍ស្នាមញញឹមនៃកម្ពុជា លើកទី២ នៅខេត្តសៀមរាប</h5></div>
+                </div>
+                <div class="col-4  h-100">
+                  <div class="col-12  h-70 hover" style="height: 70%; width: 100%;"><img src="https://www.cpp.org.kh/wp-content/uploads/2020/12/110745.jpeg" style="width: 100%;height: 100%;"></div>
+                  <div class="col-12  h-30" style="height: 30%;width: 100%;"><h5 style="color: black;">ប្រមុខរាជរដ្ឋាភិបាល អបអរសាទរខួប៥ឆ្នាំ នៃការដាក់បញ្ចូលល្បែងទាញព្រ័ត្រក្នុងបញ្ជី​បេតិកភណ្ឌវប្បធម៌អរូបីនៃមនុស្សជាតិរបស់អង្គការយូណេស្កូ(២ ធ្នូ ២០១៥ – ២ ធ្នូ ២០២០)</h5></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Inner Box 2 -->
+          <div class="box-item" style="height: 380px;">
+            <div class="h-100 p-1 text-black">
+
+              <!-- Top -->
+              <div class="row h-50 g-1 mb-1 box-small">
+                <div class="col-2"><div class="row h-100 ">
+                  <div class="col-12  h-50 hover"><img src="https://asset.cambodia.gov.kh/tourism/2025/06/photo_3_2025-06-28_11-23-16-768x476.jpg" style="width: 200px;height:90px"></div>
+                  <div class="col-12  h-50"><h6>ថ្ងៃទី៦ ខែកក្កដា ឆ្នាំ២០២៥ ព្រឹត្តិការណ៍រត់ឆ្លងឧបសគ្គ “PREAH VIHEAR TEMPLE RUN” </h6></div>
+                </div></div>
+                <div class="col-2"><div class="row h-100 ">
+                  <div class="col-12  h-50 hover"><img src="https://phnompenh.gov.kh/wp-content/uploads/2015/05/attractions-phnom-penh-800x380.jpg" style="width: 200px;height: 90px;"></div>
+                  <div class="col-12  h-50"><h6>ស្ថានភាពវិស័យទេសចរណ៍ពិភពលោកឆ្នាំ២០២១ ប្រសើរជាងឆ្នាំ២០២០កម្រិតណា?</h6></div>
+                </div></div>
+                <div class="col-2"><div class="row h-100 ">
+                  <div class="col-12  h-50 hover"><img src="https://thmeythmey25.com/img/article/28-04-2025/1745815127.webp" style="width: 200px;height: 90px"></div>
+                  <div class="col-12  h-50"><h6>វត្តមានទេសចរ អាចផ្ដល់ចំណូលដល់សហគមន៍កំពង់សាមគ្គី និងបានជួយការពារតំបន់ ធម្មជាតិ</h6></div>
+                </div></div>
+                <div class="col-2"><div class="row h-100 ">
+                   <div class="col-12  h-50 hover"><img src="https://asset.cambodia.gov.kh/tourism/2025/06/photo_5_2025-06-30_10-34-39-768x541.jpg" style="width:200px;height: 90px;"></div>
+                  <div class="col-12  h-50"><h6>ទស្សនាកម្រងរូបភាពទេសភាពពី ភ្នំព្រះ ដែលជាតំបន់អេកូទេសចរណ៍ធម្មជាតិ</h6></div>
+                </div></div>
+                <div class="col-4"></div>
+              </div>
+
+              <!-- Bottom -->
+              <div class="row h-50 g-1 box-small">
+                <div class="col-2"><div class="row h-100 ">
+                   <div class="col-12  h-50 hover"><img src="https://cdn.cc-times.com/kh.cc-times.com/media/42060/large/410551212_890456396047913_7339970178606610258_n.jpg?1703225930" style="width:200px;height: 90px"></div>
+                  <div class="col-12  h-50"><h6>រមណីយដ្ឋានទេសចរណ៍២៦កន្លែងក្នុងខេត្តក្រចេះ ត្រៀមទទួលភ្ញៀវទេសចរក្នុងឱកាសឆ្លងឆ្នាំ ខាងមុខនេះ</h6></div>
+                </div></div>
+                <div class="col-2"><div class="row h-100 ">
+                  <div class="col-12  h-50 hover"><img src="https://cdn.cambonomist.com/media/images/World_Tourism_2021__3.2e16d0ba.fill-960x540.jpg" style="width:200px;height: 90px"></div>
+                  <div class="col-12  h-50"><h6>អង្គការទេសចរណ៍ពិភពលោក (UNWTO) បានឱ្យដឹងថា ឧស្សាហកម្មទេសចរណ៍ពិភពលោកក្នុងឆ្នាំ ២០២១ </h6></div>
+                </div></div>
+                <div class="col-2"><div class="row h-100 ">
+                   <div class="col-12 h-50 hover"><img src="https://static.information.gov.kh/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNjBaQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--d0edb505a51c5513582334cdd663d5af7c57ee1e/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNT1RBd2VEWXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--70cbddbba2e46c7ca8ac0c1f8b8316d88752e16d/937A2604-04EE-4561-A424-135A74C.jpeg" style="width:200px;height:90px"></div>
+                  <div class="col-12 h-50"><h6>រមណីយដ្ឋានទេសចរណ៍ធម្មជាតិទឹកធ្លាក់ភ្នំ៥៣ កំពុងទាក់ទាញភ្ញៀវទេសចរទៅលេង</h6></div>
+                </div></div>
+                <div class="col-2"><div class="row h-100 ">
+                   <div class="col-12 h-50 hover"><img src="https://image.thmeythmey.com/pictures/2024/09/26/imgs__1_.jpg" style="width:200px;height:90px;"></div>
+                  <div class="col-12  h-50"><h6>ឧទ្យានជាតិព្រះមុនីវង្ស «បូកគោ» មានចម្ងាយ១៩០គីឡូម៉ែត្រ ពីរាជធានីភ្នំពេញ </h6></div>
+                </div></div>
+                <div class="col-2"></div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="container ">
+  <div class="header-bar1">
+    
+    <div class="red-shape1">
+      បច្ចេកវិទ្យា
+      <i class="bi bi-chevron-right"></i>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row scroll-row head-box1">
+
+    <!-- LEFT -->
+    <div class="col-md-4  scroll-item-left ">
+      <div class="row g-0">
+        <div class="col-12 hover bg-dark " style="height:250px; margin-top:10px;">
+          <img src="https://static.information.gov.kh/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBK2FNQ0E9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--116f450ce8139ac8ac9f4cacd8b2f775ac1c278a/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNT1RBd2VEWXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--70cbddbba2e46c7ca8ac0c1f8b8316d88752e16d/photo_2026-03-26_16-28-32.jpg" style="width:100%; height:250px; object-fit:cover;">
+        </div>
+        <div class="col-12 bg-info" style="height:130px;"><h5>កម្ពុជាប្រារព្ធទិវាជាតិវិទ្យាសាស្ត្រ បច្ចេកវិទ្យា និងនវានុវត្តន៍ លើកទី២ | ក្រសួងឧស្សាហកម្ម វិទ្យាសាស្រ្ត បច្ចេកវិទ្យា</h5></div>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="col-md-8  scroll-item-right mt-2">
+      <div class="row g-0">
+
+        <!-- TOP -->
+        <div class="col-12 " style="height:190px;">
+          <div class="row top-bottom-row h-100 g-0">
+
+            <div class="col-3  ">
+              <div class="row h-100 g-0">
+                <div class="col-12  h-50 hover">
+                  <img src="https://cdn.misti.gov.kh/images/medium/20240327072314MIFwbtQPpBoo.jpeg" style="width:200px; height:95px;">
+                </div>
+                <div class="col-12  h-50 mt-1"><h6>កម្ពុជាប្រារព្ធទិវាជាតិវិទ្យាសាស្ត្រ បច្ចេកវិទ្យា និងនវានុវត្តន៍ លើកទី២ | ក្រសួងឧស្សាហកម្ម វិទ្យាសាស្រ្ត បច្ចេកវិទ្យា និងនវានុវត្តន៍</h6></div>
+              </div>
+            </div>
+
+            <div class="col-3 ">
+              <div class="row h-100 g-0">
+                <div class="col-12  h-50 hover">
+                  <img src="https://www.eccc.gov.kh/images/icts/icts.png" style="width:200px; height:95px;">
+                </div>
+                <div class="col-12  h-50"><h6>បច្ចេកវិទ្យាព័ត៌មាននិងទំនាក់ទំនង - អ.វ.ត.ក.</h6></div>
+              </div>
+            </div>
+
+            <div class="col-3 ">
+              <div class="row h-100 g-0">
+                <div class="col-12  h-50 hover">
+                  <img src="https://cdn.misti.gov.kh/images/medium/20240327072509Vh9upjKDHjBU.jpeg" style="width:200px; height:95px; object-fit:cover;">
+                </div>
+                <div class="col-12  h-50"><h6>កម្ពុជាប្រារព្ធទិវាជាតិវិទ្យាសាស្ត្រ បច្ចេកវិទ្យា និងនវានុវត្តន៍ លើកទី២ | ក្រសួងឧស្សាហកម្ម វិទ្យាសាស្រ្ត បច្ចេកវិទ្យា និងនវានុវត្តន៍</h6></div>
+              </div>
+            </div>
+
+            <div class="col-3 ">
+              <div class="row h-100 g-0">
+                <div class="col-12 h-50 hover">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDOxr2FaNDGr7ZavuE-utEq1iwtjkMXSEfuw&s" style="width:200px; height:95px; object-fit:cover;">
+                </div>
+                <div class="col-12  h-50"><h6>ទំព័រដើម​ - Home - Cambodia Community Tech Center Website | C.T.C Cambodia Community Tech</h6></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+     <div class="col-12 mt-2 " style="height:190px;">
+          <div class="row top-bottom-row h-100 g-0 ">
+
+            <div class="col-3  ">
+              <div class="row h-100 g-0">
+                <div class="col-12  h-50 hover">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf1Zomrkv4Ok6_kPd4HTswodaKi7aBOj384g&s" style="width:200px; height:95px; object-fit:cover;">
+                </div>
+                <div class="col-12  h-50"><h6>ការប្រើប្រាស់បច្ចេកវិទ្យាទំនើបក្នុងវិស័យកសិកម្មនៅកម្ពុជាហាក់នៅមានកម្រិត បើធៀបនឹងប្រទេសជិតខាង</h6></div>
+              </div>
+            </div>
+
+            <div class="col-3 ">
+              <div class="row h-100 g-0">
+                <div class="col-12  h-50 hover">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROtGhijBoY9umei6mmsDyWANa7JHUx0eeJEw&s" style="width:200px; height:95px; object-fit:cover;">
+                </div>
+                <div class="col-12  h-50"><h6>ការ​រី​ចម្រើននៃ​បច្ចេកវិទ្យាឌីជីថល​​ធ្វើឱ្យស្ត្រីនិងកុមារ​ក្លាយជា​ជន​រងគ្រោះ ធ្ងន់ធ្ងរ​ច្រើន​រូប​ភាព​</h6></div>
+              </div>
+            </div>
+
+            <div class="col-3 ">
+              <div class="row h-100 g-0">
+                <div class="col-12  h-50 hover">
+                  <img src="https://s3.ams.com.kh/education/2022/05/programming-development-technolog-1-scaled.jpg" style="width:200px; height:95px; object-fit:cover;">
+                </div>
+                <div class="col-12  h-50"><h6>បច្ចេកវិទ្យាថ្មីៗ ៤ ប្រភេទកំពុងប្រើប្រាស់លើកកម្ពស់បរិយាបន្នសង្គម</h6></div>
+              </div>
+            </div>
+
+            <div class="col-3 ">
+              <div class="row h-100 g-0">
+                <div class="col-12  h-50 hover">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxH199y8jD6cZqOXxKUK2MY7DMokRx3MeU_w&s" style="width:200px; height:95px; object-fit:cover;">
+                </div>
+                <div class="col-12 h-50"><h6>English below ] នៅក្នុងកម្មវិធីសន្និសីទសារព័ត៌មានអបអរនិសិត្សឆ្នើមនៃសាលាតិចណូ តំណាងឱ្យកម្ពុជា</h6></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="container ">
+  <div class="header-bar2">
+    
+    <div class="red-shape2">
+      ជីវិតនិងសង្គម
+      <i class="bi bi-chevron-right"></i>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row scroll-row head-box1">
+
+    <!-- LEFT -->
+    <div class="col-md-4  scroll-item-left ">
+      <div class="row g-0">
+        <div class="col-12 hover bg-dark" style="height:250px; margin-top:10px;">
+          <img src="https://pressocm.gov.kh/wp-content/uploads/2024/02/photo_2024-02-26_16-49-38.jpg" style="width:100%; height:250px; object-fit:cover;">
+        </div>
+        <div class="col-12 bg-danger" style="height:130px;"><h5>សម្តេចធិបតី ហ៊ុន ម៉ាណែត៖ កីឡា នាំមកនូវសុខភាពល្អ និងរឹតចំណងសាមគ្គីភាព សុខដុមរមនាក្នុងសង្គមជាតិ </h5></div>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="col-md-8  scroll-item-right mt-2">
+      <div class="row g-0">
+
+        <!-- TOP -->
+        <div class="col-12 " style="height:190px;">
+          <div class="row top-bottom-row h-100 g-0">
+
+            <div class="col-3  ">
+              <div class="row h-100 g-0">
+                <div class="col-12  h-50 hover">
+                  <img src="https://s3.ams.com.kh/education/2022/12/Volunteerwork.jpg" style="width:200px; height:95px;">
+                </div>
+                <div class="col-12  h-50 mt-1"><h6>ការងារស្ម័គ្រចិត្តផ្តល់បទពិសោធន៍សម្រាប់ជីវិត និងរួមចំណែកជួយសង្គម</h6></div>
+              </div>
+            </div>
+
+            <div class="col-3 ">
+              <div class="row h-100 g-0">
+                <div class="col-12  h-50 hover">
+                  <img src="https://academiccdn.sgp1.digitaloceanspaces.com/tsktvnews/uploads/2025/10/2_10_2025_a4608.jpg" style="width:200px; height:95px;">
+                </div>
+                <div class="col-12  h-50"><h6>ការសិក្សាស្វែងយល់ពីសង្គម សេដ្ឋកិច្ច ជីវភាព និងមុខរបរ ដើម្បីនិរន្តរភាពដែនជម្រកសត្វព្រៃលំផាត់ – NatureLife</h6></div>
+              </div>
+            </div>
+
+            <div class="col-3 ">
+              <div class="row h-100 g-0">
+                <div class="col-12  h-50 hover">
+                  <img src="https://image.freshnewsasia.com/2021/2025/11/fn-2025-11-10-11-34-49-863.jpg" style="width:200px; height:95px; object-fit:cover;">
+                </div>
+                <div class="col-12  h-50"><h6>ក្រសួងការងារនឹងរៀបចំពិព័រណ៍ការងារ សន្តិសុខសង្គម និងបណ្តុះបណ្តាលវិជ្ជាជីវៈ នៅខេត្តធំៗ៣ ដើម្បីផ្តល់ឱកា</h6></div>
+              </div>
+            </div>
+
+            <div class="col-3 ">
+              <div class="row h-100 g-0">
+                <div class="col-12 h-50 hover">
+                  <img src="https://image.freshnewsasia.com/2021/id-154/fn-2022-06-09-04-17-58-9.jpg" style="width:200px; height:95px; object-fit:cover;">
+                </div>
+                <div class="col-12  h-50"><h6>ថ្នាក់ដឹកនាំ និងបុគ្គលិក ខ្មែរ ប៊ែវើរីជីស និង ជីប ម៉ុង ១៧៦នាក់ ស្ម័គ្រចិត្តបរិច្ចាគឈាម</h6></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+     <div class="col-12 mt-2 " style="height:190px;">
+          <div class="row top-bottom-row h-100 g-0 ">
+
+            <div class="col-3  ">
+              <div class="row h-100 g-0">
+                <div class="col-12  h-50 hover">
+                  <img src="https://khmernote.com.kh/wp-content/uploads/2025/10/KVP_3344.jpg" style="width:200px; height:95px; object-fit:cover;">
+                </div>
+                <div class="col-12  h-50"><h6>បុគ្គលិក ជីប ម៉ុង ជិត ១៥០ នាក់ ចូលរួមយុទ្ធនាការ «បរិច្ចាគឈាមសង្គ្រោះជីវិត» ដែលរៀបចំដោយ ជីប ម៉ុង</h6></div>
+              </div>
+            </div>
+
+            <div class="col-3 ">
+              <div class="row h-100 g-0">
+                <div class="col-12  h-50 hover">
+                  <img src="https://cdn.cc-times.com/kh.cc-times.com/media/79590/large/photo_2026-04-02_09-00-47.jpg?1775096379" style="width:200px; height:95px; object-fit:cover;">
+                </div>
+                <div class="col-12  h-50"><h6>តារាហូលីវូដ Angelina Jolie មកដល់ស្រុកសំឡូតនៃប្រទេសកម្ពុជា - សុីសុីថាមស៍​</h6></div>
+              </div>
+            </div>
+
+            <div class="col-3 ">
+              <div class="row h-100 g-0">
+                <div class="col-12  h-50 hover">
+                  <img src="https://s3.ams.com.kh/education/2025/10/van-tay-media-OfbyslkgjNg-unsplash-1-scaled.jpg" style="width:200px; height:95px; object-fit:cover;">
+                </div>
+                <div class="col-12  h-50"><h6>ជំនាញជីវិតចំនួន៥ ដែលយុវជនគួរមាន ដើម្បីសម្របខ្លួនក្នុងសង្គម</h6></div>
+              </div>
+            </div>
+
+            <div class="col-3 ">
+              <div class="row h-100 g-0">
+                <div class="col-12  h-50 hover">
+                  <img src="https://cdn.sabay.com/cdn/media.sabay.com/media/PR-Photos/June-(12)/62a95d68a7ef0_1655266620_medium.jpg" style="width:200px; height:95px; object-fit:cover;">
+                </div>
+                <div class="col-12 h-50"><h6>មកស្គាល់បុគ្គលគំរូ ៨ រូប យុវជនខ្មែរគួរចំណាយពេលស្ដាប់ អាន រៀនសូត្រតាម នឹងនាំ ជីវិតឱ្យល្អប្រសើរ - ជីវិតនិង</h6></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+<div class="container ">
+  <div class="header-bar3">
+    
+    <div class="red-shape3">
+      កីឡា
+      <i class="bi bi-chevron-right"></i>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row scroll-row head-box1">
+
+    <!-- LEFT -->
+    <div class="col-md-4  scroll-item-left ">
+      <div class="row g-0">
+        <div class="col-12 hover bg-dark" style="height:250px; margin-top:10px;">
+          <img src="https://lh5.googleusercontent.com/proxy/k_Nvbv8-w8rvUx4aLYO75fAVwr2_t9_khCgN4z_24pAqkoXN_CRk3GjrOlf_YoepHu9amB9Rqq3kdohLIHXX-CQBAss6P3UGpZnN76vDhUI" style="width:100%; height:250px; object-fit:cover;">
+        </div>
+        <div class="col-12 bg-warning" style="height:130px;"><h5>សម្តេចតេជោ កោតសរសើរដល់ ក្រុមកីឡាករក្រុមបាល់ទាត់ជម្រើសជាតិកម្ពុជា | សារព័ត៌មាន នគរវត្ត</h5></div>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="col-md-8  scroll-item-right mt-2">
+      <div class="row g-0">
+
+        <!-- TOP -->
+        <div class="col-12 " style="height:190px;">
+          <div class="row top-bottom-row h-100 g-0">
+
+            <div class="col-3  ">
+              <div class="row h-100 g-0">
+                <div class="col-12  h-50 hover">
+                  <img src="https://cdn.cc-times.com/kh.cc-times.com/images/26092/large/FB_IMG_1669177860362-1024x683.jpg?1726125213" style="width:200px; height:95px;">
+                </div>
+                <div class="col-12  h-50 mt-1"><h6>ព្រឹត្តិការណ៍កីឡាជាតិ និងកីឡាជាតិជនពិការ នឹងប្រព្រឹត្តទៅនៅចុងខែតុលាខាងមុខនេះ</h6></div>
+              </div>
+            </div>
+
+            <div class="col-3 ">
+              <div class="row h-100 g-0">
+                <div class="col-12  h-50 hover">
+                  <img src="https://gdb.voanews.com/09320000-0a00-0242-3c3b-08dafee25a71_cx0_cy12_cw96_w408_r1_s.jpeg" style="width:200px; height:95px;">
+                </div>
+                <div class="col-12  h-50"><h6>ស៊ីហ្គេម​លើកទី​៣២​នៅ​កម្ពុជា​នឹង​មាន​ការ​ប្រកួត​កីឡា​គុន​ខ្មែរ​ ដោយ​គ្មាន​វត្តមាន​ថៃ</h6></div>
+              </div>
+            </div>
+
+            <div class="col-3 ">
+              <div class="row h-100 g-0">
+                <div class="col-12  h-50 hover">
+                  <img src="https://nsc.gov.kh/wp-content/uploads/2024/09/Wong-R1.webp" style="width:200px; height:95px; object-fit:cover;">
+                </div>
+                <div class="col-12  h-50"><h6>កីឡាវាយកូនបាល់ - ពហុកីឡដ្ឋានជាតិ National Sports Complex</h6></div>
+              </div>
+            </div>
+
+            <div class="col-3 ">
+              <div class="row h-100 g-0">
+                <div class="col-12 h-50 hover">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTecM9U8j8Z67NSkAHGVXSoIuNyHe1CXcmjRA&s" style="width:200px; height:95px; object-fit:cover;">
+                </div>
+                <div class="col-12  h-50"><h6>ភ្នំពេញ៖ អបអរសាទរ សមាគមកីឡាវាយកូនបាល់ក្រសួងមហាផ្ទៃ ដណ្តើមបានមេដាយសរុបចំនួន ៤គ្រឿង</h6></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+     <div class="col-12 mt-2 " style="height:190px;">
+          <div class="row top-bottom-row h-100 g-0 ">
+
+            <div class="col-3  ">
+              <div class="row h-100 g-0">
+                <div class="col-12  h-50 hover">
+                  <img src="https://s3.ams.com.kh/education/2023/06/Fo_cover.jpg" style="width:200px; height:95px; object-fit:cover;">
+                </div>
+                <div class="col-12  h-50"><h6>លក្ខណៈពិសេស ដែលគួរដឹងពីកីឡាបាល់ទាត់ជនពិការភ្នែក Football</h6></div>
+              </div>
+            </div>
+
+            <div class="col-3 ">
+              <div class="row h-100 g-0">
+                <div class="col-12  h-50 hover">
+                  <img src="https://s.rfi.fr/media/display/14fdfff2-1671-11ea-8f17-005056a99247/w:1024/p:16x9/13412889_1029083953806768_2548486650058547009_n.jpg" style="width:200px; height:95px; object-fit:cover;">
+                </div>
+                <div class="col-12  h-50"><h6>បាល់ទាត់​កម្ពុជា​៖ មោទនភាព​បង្កប់​ដោយ​ឆន្ទៈ​នៃ​ការ​ប្រឹង​ប្រែង​បន្ថែម - ទស្សនៈព្រឹត្តិការណ៍ខ្មែរ - RFI​</h6></div>
+              </div>
+            </div>
+
+            <div class="col-3 ">
+              <div class="row h-100 g-0">
+                <div class="col-12  h-50 hover">
+                  <img src="https://static.bangkokhospital.com/uploads/2021/03/shutterstock_1902025705.jpg" style="width:200px; height:95px; object-fit:cover;">
+                </div>
+                <div class="col-12  h-50"><h6>Surf Skate មិនថាវាឈឺប៉ុណ្ណាទេ វាអាចមើលថែបាន។ | Bangkok Hospital Headquarter</h6></div>
+              </div>
+            </div>
+
+            <div class="col-3 ">
+              <div class="row h-100 g-0">
+                <div class="col-12  h-50 hover">
+                  <img src="https://phkaslapartner.com/wp-content/uploads/2023/04/image-4-9-edited.jpg" style="width:200px; height:95px; object-fit:cover;">
+                </div>
+                <div class="col-12 h-50"><h6>ស្វែងយល់ពីកីឡាអូឡាំពិក - Phkasla Partner</h6></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+<div class="container ">
+  <div class="header-bar5">
+    
+    <div class="red-shape5">
+      កម្សាន្ត
+      <i class="bi bi-chevron-right"></i>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row scroll-row head-box1">
+
+    <!-- LEFT -->
+    <div class="col-md-4  scroll-item-left ">
+      <div class="row g-0">
+        <div class="col-12 hover bg-dark" style="height:250px; margin-top:10px;">
+          <img src="https://static.information.gov.kh/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOEZxQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--02dd622167e6712cfe91ef1a462dc8332ab68c16/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNT1RBd2VEWXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--70cbddbba2e46c7ca8ac0c1f8b8316d88752e16d/IMG_2825.jpg" style="width:100%; height:250px; object-fit:cover;">
+        </div>
+        <div class="col-12 bg-success" style="height:130px;"><h5>ពលរដ្ឋកម្ពុជាជាច្រើនបាន និងកំពុងរៀបចំផែនការធ្វើដំណើរកម្សាន្ត ក្នុងអំឡុងបុណ្យចូលឆ្នាំថ្មី - ក្រសួងព័ត៌មាន</h5></div>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="col-md-8  scroll-item-right mt-2">
+      <div class="row g-0">
+
+        <!-- TOP -->
+        <div class="col-12 " style="height:190px;">
+          <div class="row top-bottom-row h-100 g-0">
+
+            <div class="col-3  ">
+              <div class="row h-100 g-0">
+                <div class="col-12  h-50 hover">
+                  <img src="https://gdb.voanews.com/01000000-0aff-0242-f4d9-08dc5d859c24_w408_r1_s.jpg" style="width:200px; height:95px;">
+                </div>
+                <div class="col-12  h-50 mt-1"><h6>អ្នក​រិះគន់​មួយ​ចំនួន​មាន​ចម្ងល់​អំពី​តួលេខ​អ្នក​ដើរ​លេង​កម្សាន្ត ​ក្នុង​ពេល​ចូល​ឆ្នាំ​ខ្មែរ</h6></div>
+              </div>
+            </div>
+
+            <div class="col-3 ">
+              <div class="row h-100 g-0">
+                <div class="col-12  h-50 hover">
+                  <img src="https://s3.ams.com.kh/education/2023/12/6-1-1024x576.png" style="width:200px; height:95px;">
+                </div>
+                <div class="col-12  h-50"><h6>ដើរកម្សាន្តជាវិធីសាស្ត្រជួយបង្កើនថាមពលជីវិតដ៏អស្ចារ្យ</h6></div>
+              </div>
+            </div>
+
+            <div class="col-3 ">
+              <div class="row h-100 g-0">
+                <div class="col-12  h-50 hover">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4GnVJPVagwzLj9GiLWLNwASRI54Gpq3upeA&s" style="width:200px; height:95px; object-fit:cover;">
+                </div>
+                <div class="col-12  h-50"><h6>ដំណើរកម្សាន្ត - NagaWorld</h6></div>
+              </div>
+            </div>
+
+            <div class="col-3 ">
+              <div class="row h-100 g-0">
+                <div class="col-12 h-50 hover">
+                  <img src="https://khmernote.com.kh/wp-content/uploads/2025/09/photo_2025-09-24_07-55-32-2.j.jpg" style="width:200px; height:95px; object-fit:cover;">
+                </div>
+                <div class="col-12  h-50"><h6>ខេត្តកំពតមានភ្ញៀវទេសចរជិត ១៥ម៉ឺននាក់មកសម្រាកកម្សាន្ត </h6></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+     <div class="col-12 mt-2 " style="height:190px;">
+          <div class="row top-bottom-row h-100 g-0 ">
+
+            <div class="col-3  ">
+              <div class="row h-100 g-0">
+                <div class="col-12  h-50 hover">
+                  <img src="https://khmernote.com.kh/wp-content/uploads/2024/04/tju7yloholgv-1024x538.jpg" style="width:200px; height:95px; object-fit:cover;">
+                </div>
+                <div class="col-12  h-50"><h6>ឆ្នេរខ្សាច់កម្សាន្តចន្លោះស្ពានចាស់ដល់ស្ពានថ្មី នឹងបើកឱ្យទេសចរចូលលេងកម្សាន្តក្នុងឱកាសចូលឆ្នាំថ្មី -</h6></div>
+              </div>
+            </div>
+
+            <div class="col-3 ">
+              <div class="row h-100 g-0">
+                <div class="col-12  h-50 hover">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE9S4wjvFwav8fRRseXVCFoVyEKR_BUDuoTw&s" style="width:200px; height:95px; object-fit:cover;">
+                </div>
+                <div class="col-12  h-50"><h6>ទេសចរជាតិ និងអន្តរជាតិជិត២៤លាននាក់ បានដើរកម្សាន្តរយៈពេល៣ថ្ងៃ នាឱកាសបុណ្យចូលឆ្នាំខ្មែរ​</h6></div>
+              </div>
+            </div>
+
+            <div class="col-3 ">
+              <div class="row h-100 g-0">
+                <div class="col-12  h-50 hover">
+                  <img src="https://jianhua.sgp1.cdn.digitaloceanspaces.com/2025/02/14bfc50a.jpg" style="width:200px; height:95px; object-fit:cover;">
+                </div>
+                <div class="col-12  h-50"><h6>ខេត្តកែបមានឆ្នេរកម្សាន្តគួរឱ្យទាក់ទាញ ៣ កន្លែង សម្រាប់ភ្ញៀវទេសចរសម្រាកលម្ហែ</h6></div>
+              </div>
+            </div>
+
+            <div class="col-3 ">
+              <div class="row h-100 g-0">
+                <div class="col-12  h-50 hover">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQls-Q0UkM4-FxPkgzTVSz2i4wcD_JuKGA05A&s" style="width:200px; height:95px; object-fit:cover;">
+                </div>
+                <div class="col-12 h-50"><h6>ខេត្តកែប នឹងក្លាយជាតំបន់ទេសចរណ៍សម្រាកលំហែកម្រិតខ្ពស់ គ្មានកាស៊ីណូ គ្មានរោងចក្រសហគ្រាស</h6></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="container-fluid footer" style="height:380px; background:#000;color: #fff;">
+  <div class="row h-100">
+    <div class="col-lg-4 col-12 d-flex flex-column justify-content-center align-items-center">
+      <img src="./photo_2026-04-03_09-57-54.jpg" style="max-width:130px;">
+      <h6>© រក្សាសិទ្ធគ្រប់យ៉ាងដោយSabay ឆ្នាំ២០២៦ <br> គោលការណ៍ភាព| Privacy Policy  <br><br>
+         អាសយដ្ធាន <br> អគ្គាលេខ ៣០៨ មហាវិថីព្រះមុន្នីវង្ស <br>
+        សង្កាតបឹងរាំង ខណ្ឌដូនពេញ</h6>
+    </div>
+  
+     <div class=" col-lg-4  d-none d-lg-flex justify-content-center align-items-center text-white text-center ">
+      <div>
+        <h5>អំពីយើង</h5>
+        <h6>Sabay Digital Corporation ជាក្រុមហុនព័ត៏មានឌីជីថល <br> និនកម្សាន្តឈានមុខគេ នៅកម្ពុជា ។ ព័ត៏មានបន្ថែម <br>
+        ផលិតផល និង សេវាកម្ម របស់Sabay</h6>
+        <img src="https://news.sabay.com.kh/img/logo.png"style="width: 40px;height: 40px;">
+        <img src="https://media-src.sabay.com/mysabay_user/logo_picture/1764651755559-pm31sd9.png"style="width: 40px;height: 40px;">
+        <img src="https://kleykley.sabay.com.kh/img/logo.png"style="width: 40px;height: 40px;">
+        <img src="https://der.sabay.com.kh/img/logo.png"style="width: 40px;height: 40px;">
+        <img src="https://cdn.sabay.com/cdn/media.sabay.com/media/publications/logos/61d5007946e0b_1641349200_small.png"style="width: 40px;height: 40px;">
+        <img src="https://cdn.sabay.com/cdn/media.sabay.com/media/publications/logos/61d501f25761a_1641349560_small.png"style="width: 40px;height: 40px;">
+        <img src="https://cdn.sabay.com/cdn/media.sabay.com/media/publications/logos/61d50338ea098_1641349920_small.png"style="width: 40px;height: 40px;">
+        <img src="https://business.sabay.com.kh/img/logo.png"style="width: 40px;height: 40px;">
+        <img src="https://cdn.sabay.com/cdn/media.sabay.com/media/publications/logos/61d4f62a95ade_1641346560_small.png"style="width: 40px;height: 40px;">
+      </div>
+    </div>
+    <div class="col-lg-4 col-12 d-flex justify-content-center align-items-center text-white text-center">
+      <div>
+       <h5>ជួបគ្នានៅបណ្ដាញសង្គម</h5>
+       <h6>ទំនាក់ទំនង</h6>
+       <i class="bi bi-facebook"></i>
+       <i class="bi bi-youtube"></i>
+       <i class="bi bi-instagram"></i>
+       <i class="bi bi-tiktok"></i>
+       <i class="bi bi-telegram"></i>
+       <h6>info@sabay.com</h6>
+       <h6>023 228 000</h6>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("show");
+}
+</script>
+<script>
+  let slider = document.getElementById("slider");
+  let index = 0;
+  let total = 4;
+
+  function nextSlide() {
+    let width = slider.clientWidth;
+    index = (index + 1) % total;
+
+    slider.scrollTo({
+      left: width * index,
+      behavior: "smooth"
+    });
+  }
+
+  function prevSlide() {
+    let width = slider.clientWidth;
+    index = (index - 1 + total) % total;
+
+    slider.scrollTo({
+      left: width * index,
+      behavior: "smooth"
+    });
+  }
+
+  // auto slide
+  setInterval(() => {
+    nextSlide();
+  }, 3000);
+</script>
+  <script>
+    const navBtns = document.querySelectorAll('.nav-btn');
+    const sections = document.querySelectorAll('.content-section');
+    navBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.getAttribute('data-target');
+        sections.forEach(sec => sec.classList.add('hidden'));
+        navBtns.forEach(b => b.classList.remove('bg-sky-100', 'text-sky-700'));
+
+        document.getElementById(target).classList.remove('hidden');
+        btn.classList.add('bg-sky-100', 'text-sky-700');
+      });
+    });
+    document.querySelector('[data-target="products"]').classList.add('bg-sky-100', 'text-sky-700');
+  </script>
+
+</body>
+</html>

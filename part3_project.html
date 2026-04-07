@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+ <!-- <link rel="stylesheet" href="./first_project.css"> -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer&display=swap" rel="stylesheet">
+</head>
+<style>
+   body{
+  font-family: 'Noto Sans Khmer', sans-serif;
+  min-height: 100vh;
+}
+
+@media (max-width: 576px){
+
+  .box1-wrap{
+    flex-direction: column !important;
+    height: auto !important;
+  }
+
+  .group-1{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .group-1 > .item{
+    width: 50%;
+  }
+
+  .small-box{
+    flex-direction: column !important;
+  }
+
+  .small-box .img{
+    width: 100% !important;
+    height: 70px;
+  }
+
+  .small-box .text{
+    width: 100% !important;
+    height: auto;
+  }
+  
+}
+
+.box{
+  transition: 0.4s;
+}
+.box img:hover{
+  transform: scale(0.98);
+  color: #000;
+}
+
+
+
+.desktop-menu {
+    display: block;
+}
+.mobile-menu {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    .desktop-menu {
+        display: none; /* hide desktop menu */
+    }
+    .mobile-menu {
+        display: block; /* show mobile menu */
+    }
+}
+
+.topbar{
+    height:70px;
+    background:black;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+   
+    
+}
+
+.menu-btn{
+    position:absolute;
+    left:15px;
+    font-size:25px;
+    color:white;
+    cursor:pointer;
+}
+
+
+.menu-box{
+    position:fixed; 
+    top:60px;
+    left:0;
+    width:100%;
+    background:red;
+    z-index:9999;
+    max-height:0;
+    overflow:hidden;
+    transition:0.4s ease;
+}
+
+.menu-box.show{
+    max-height:250px;
+}
+
+.menu-item{
+    padding:15px;
+    color:white;
+    display:block;
+    text-decoration:none;
+}
+.hover{
+  transition: 0.4s;
+}
+.hover img:hover{
+  transform: scale(0.98);
+  color: #000;
+}
+.mobile-menu a:hover{
+  background-color: rgb(88, 11, 11);
+}
+</style>
+<body>
+  
+    <section class="desktop-menu w-100">
+  <div class="w-100 bg-black py-2">
+    <img src="https://news.sabay.com.kh/img/logo.png" class="ms-5" style="width: 100px; height: 100px;">
+  </div>
+  <div class="w-100 bg-danger">
+    <div class="d-flex align-items-center gap-4 p-3 ms-5">
+      <a href="./first_project.html" class="text-white text-decoration-none"data-target><i class="bi bi-house-door-fill"></i></a>
+      <a href="./part1_project.html" class="text-white text-decoration-none"data-target>កម្សាន្ត</a>
+      <a href="./part2_project.html" class="text-white text-decoration-none"data-targrt>បច្ចេកវិទ្យា</a>
+      <a href="#" class="text-white text-decoration-none"data-target>ជីវិតនិងសង្គម</a>
+      <a href="./part4_project.html" class="text-white text-decoration-none"data-target>កីឡា</a>
+      <a href="#" class="text-white text-decoration-none"data-target>AUTO TALK</a>
+    </div>
+  </div>
+</section>
+<div class="mobile-menu">
+  <div class="topbar">
+      <div class="menu-btn" onclick="toggleMenu()">☰</div>
+      <img src="https://news.sabay.com.kh/img/logo.png" style="width: 50px;height: 50px;">
+  </div>
+
+  <div id="menu" class="menu-box">
+      <a href="./first_project.html" class="menu-item"><i class="bi bi-house-door-fill"></i></a>
+      <a href="./part1_project.html" class="menu-item">កម្សាន្ត</a>
+      <a href="./part2_project.html" class="menu-item">បច្ចេកវិទ្យា</a>
+      <a href="#" class="menu-item">ជីវិតនិងសង្គម</a>
+      <a href="./part4_project.html" class="menu-item">កីឡា</a>
+      <a href="#" class="menu-item">AUTO TALK</a>
+  </div>
+</div>
+
+<div class="container-fluid"style=" width: 95%;margin-top:15px;">
+  <div class="row">
+    <div class="col-lg-8 " style="box-shadow: 1px 1px  2px 1px rgb(167, 163, 163);">
+
+      <div class="d-flex gap-3 box1-wrap " style="height:300px; ">
+        
+        <div class="flex-fill d-flex flex-column box bg-dark">
+          <div style="height:70%;">
+            <img src="https://moi-static.sgp1.cdn.digitaloceanspaces.com/uploads/post/feature_image/169893/49643de7-5146-4fe6-a54d-fd058e0f2682-feature-feature.jpg"
+            style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div style="height:30%; background-color:#fff;"><h6>វីដេអូ ៖ ការដឹកជញ្ជូនលើសទម្ងន់មិនមែនមានតែផលប៉ះពាល់ដល់ផ្លូវប៉ុណ្ណោះទេ ប៉ុន្តែប៉ះពាល់ដល់សុវត្ថិភាពអាយុ</h6></div>
+        </div>
+        <div class="flex-fill d-flex flex-column box bg-dark">
+          <div style="height:70%;">
+            <img src="https://khmernote.com.kh/wp-content/uploads/2024/08/uutiwj-uhwu-ijgw-ujki9s.jpg"
+            style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div style="height:30%; background-color: #fff;"><h6>ក្រសួងព្រះបរមរាជវាំង បដិសេធចំពោះបុគ្គលម្ចាស់គណនី TIK TOK មានឈ្មោះ នរោត្តម សូរិយាពង្ស និង ស៊ីសុវត្ថិ</h6></div>
+        </div>
+
+        
+
+      </div>
+
+      <!-- GROUP 1 -->
+      <div class="group-1 mt-2">
+
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKbMs7giy8JQ2CyGF9rxyfBxMijl1ooIW-nQ&s" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>អាជ្ញាធរ​ជាតិ​អប្សរាបញ្ជាក់ថា ករណីថតភាព​យន្ត ឬ ចម្រៀង​នៅរមនីយដ្ឋានអង្គរចាំបាច់​ត្រូវ​សុំ​ការ​អនុញ្ញាត​ជាមុន ខណៈមហាជនសម្តែងការមិនពេញចិត្ត</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTi3yV34H8CabXTQKnEXNgCD5XLw5H458AnA&s" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>ក្រៅពីមានជំនាញផ្ទាល់ខ្លួនហើយ តើត្រូវការអ្វីបន្ថែមទៀត ដើម្បីដើរឱ្យទាន់សម័យកាលដែលមានភាពប្រែប្រួលយ៉ាងលឿនរហ័សនាពេលបច្ចុប្បន្ននេះ? តាមរយៈគេហទំព័រ Chevening </h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTifMZZttswNzJ1zNFP0o1TGaa6-UIYS4anFA&s" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>លោកជំទាវបណ្ឌិត ពេជ ចន្ទមុន្នី ចែករំលែកចំណេះដឹង បទពិសោធជីវិត និងការងារ ដែលលោកជំទាវជួបប្រទះ</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://s3.ams.com.kh/education/2022/12/Volunteerwork.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>យុវតី ភិត ស្រស់ គឺជា​សិស្ស​ថ្នាក់ទី១២ មក​ពីខេត្តកំពង់ធំ, នាង​គឺជា​ប្រធាន​ក្រុម នៃគម្រោង​ «មូលនិធិវិទ្យាល័យ» ដែល​ជាប់ជ័យលាភីជា​គម្រោង​ឆ្នើម​ប្រចាំ​ឆ្នាំ​២០២២ នៃការ​ប្រកួត កម្មវិធី «ការស្ម័គ្រចិត្តដើម្បីសហគមន៍​ខ្ញុំ» កាលពីពេលថ្មីៗនេះ។</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGUKJF5OKEsMuyzsihEcY6UTmT9B1AC62P5w&s" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>លោក ហ៊ុន ម៉ាណែត៖ យុវជន គឺជាកម្លាំងបន្តវេន ដែលមានសក្តានុពលយ៉ាងសំខាន់ របស់ប្រទេសជាតិ ហើយក៏រឹតតែចាំបាច់បំផុត ក្នុងការណ៍ដែលយុវជន អាចចូលរួមចំណែកជាមួយនឹងសង្គមជាតិ</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://static.information.gov.kh/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNGZKQlE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--07540c8e7a82bfa4d7615c6f49bdd396f8941236/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lOTVRNMU1IZzVNREFHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--30b79c7f7567bd0a04d6c485cf8a2bbc24e21d2f/img-3151.jpeg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>នៅក្នុងបរិវត្តកម្មឌីជីថល ស្រ្តីនិងក្មេងស្រី គឺមានសារៈសំខាន់ណាស់ ដើម្បីការវិវឌ្ឍនៃសង្គមជាតិ - ក្រសួង</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwgKRmhzdDU2CiiQq2jlGeVLj7qLNeBSuYsA&s" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>សមាគម ជីវិត និង ក្តីសង្ឃឹម (@SomniengAngkor) • Facebook</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZavpdR4lT-TV3Qv8CERA694Wdx10_Nja6Lg&s" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>លោកជំទាវបណ្ឌិត ពេជ ចន្ទមុន្នី ហ៊ុនម៉ាណែត៖ ចលនាកាយឫទ្ធិនារីកម្ពុជា ផ្តល់ឱកាសឲ្យកុមារី និងយុវតី សាកល្បងចូលរួមសកម្មភាពសង្គមផ្សេងៗ ដើម្បីកសាងទំនុកចិត្ត និងការអភិវឌ្ឍប្រទេសជាតិ</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1KxSdy22j7ebfrnKWLfEUET8fk2sxoTEk1A&s" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>ឯកឧត្តមបណ្ឌិតសភាចារ្យ ហង់ជួន ណារ៉ុន ឧបនាយករដ្ឋមន្ត្រី រដ្ឋមន្ត្រីក្រសួងអប់រំ យុវជន និងកីឡា អមដំណើរដំណើរដោយឯកឧត្តម អ៊ុន បុត្ត អភិបាលរងខេត្តកំពង់ធំ លោក តាន់ ប៊ុនហុង ប្រធានមន្ទីរអប់រំ យុវជន និង</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyY93ojdOTxWX4G0yfCiKYsIELoaBBpGtlXA&s" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>ភ្នំពេញ៖ លោក ហេង វិសាល និងស្រីនា ជាអ្នកផលិតមាតិកាតាមបណ្តាញសង្គមដ៏ល្បីប្រកាសឧបត្ថម្ភប្រាក់ ១០០$ ជារៀងរាល់ខែ ដល់វីរៈកងទ័ព២រូបដែលថៃបានដោះលែង អស់មួយជីវិត ក្រោយលោកទាំងពីរបានត្រូវប្រទេសថៃ ចាប់ឃាត់ខ្លួននាពេលថ្មីៗនេះ។</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRKxFiOEQ98978ZHVH31gMno7YCfc8CxgMpg&s" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>ក្រៅពីមានជំនាញផ្ទាល់ខ្លួនហើយ តើត្រូវការអ្វីបន្ថែមទៀត ដើម្បីដើរឱ្យទាន់សម័យកាលដែលមានភាពប្រែប្រួលយ៉ាងលឿនរហ័សនាពេលបច្ចុប្បន្ននេះ? តាមរយៈគេហទំព័រ Chevening បានបង្ហាញជំនាញប្រាំដែលបានរួមចំណែកក្នុងការពន្លឿនភាពលូតលាស់</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrTOLhMkFLQgT1Q2T_Et3GOoyYtZXA7wyGhA&s" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>កាលពីថ្ងៃទី ០៧ មីនា ២០២៥ ដល់ ០៩ មីនា ២០២៥ យុវជនមួយក្រុមឈ្មោះ Future Pioneers បានបង្កើតគម្រោង «Green Sphere» ដោយបានជ្រើសរើសយុវជន ១១នាក់ ដើម្បីចូលរួមសកម្មភាព ការស្វែងយល់អំពីសហគមន៍ និងបរិស្ថានធម្មជាតិ</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_MppVqaqKKUktEu4Wlh90ZEB6H0Vtb68s1w&s" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>ចូរយើងធ្វើការរួមគ្នាដើម្បីជួយមនុស្សឱ្យធ្វើសមាហរណកម្មឡើងវិញទៅក្នុងសហគមន៍ និង ធ្វើឱ្យជីវិតរបស់ពួកគេ</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTydIl3i_Vlj9cEdgE76he285k02IMITdfp5g&s" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>
+រស់នៅក្នុងសង្គមសព្វថ្ងៃនេះ មានកត្តាជាច្រើនដែលជះឥទ្ធិពលទៅលើជីវិត និងជីវភាពរបស់មនុស្សយើងម្នាក់ៗ។ ប៉ុន្តែកត្តាដ៏សំខាន់បំផុតមួយដែលអាចកំណត់នូវជោគជតា និងអនាគតរបស់យើងបានមានតែមួយគត់គឺ «យើងខ្លួនឯង»។</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://pressocm.gov.kh/wp-content/uploads/2024/02/photo_2024-02-26_16-49-38.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>សម្តេចធិបតី ហ៊ុន ម៉ាណែត៖ កីឡា នាំមកនូវសុខភាពល្អ និងរឹតចំណងសាមគ្គីភាព សុខដុមរមនាក្នុងសង្គមជាតិ |</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://cdn.sabay.com/cdn/media.sabay.com/media/Chin-Sopheak/CS-33/CS-(36)/656c4c0d16f63_1701596160_medium.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>លទ្ធផល នៃការប្រឡងសញ្ញាបត្រមធ្យមសិក្សាទុតិយភូមិ ឬបាក់ឌុប ត្រូវបានក្រសួងអប់រំកាលចុងខែវិច្ឆិកា ឆ្នាំ២០២៣។ បេក្ខជនដែលបានប្រឡងជាប់ បានអបអរសាទរចំពោះជ័យជម្នះរបស់ខ្លួន ខណៈបេក្ខជនមួយចំនួន ក៏ខូចចិត្ដចំពោះលទ្ធផលរបស់ខ្លួនដែលប្រឡងធ្លាក់។</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0mRV8HwYZEoANeM0z-LPj9-F-MJHCCvKS2Q&s" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>ក្នុងសង្គមបច្ចេកវិទ្យាទំនើប ការអប់រំកុមារតូចមិនត្រឹមតែបង្រៀនអាន សរសេរ និងគណនាប៉ុណ្ណោះទេ ប៉ុន្តែគួរតែផ្តោតលើការអភិវឌ្ឍសមត្ថភាពគិតវិភាគ បំណិនជីវិត និងការបង្កើតថ្មី។ </h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSESTi4B0_r07AT_2jenc52Sms2l53fa2zgkQ&s" style="width: 100%;height: 100%;"></div>
+            <div class="text" style="width:70%;height:150px;"><h6>រដ្ឋមន្រ្តីសង្គមកិច្ច៖ រាជរដ្ឋាភិបាលកម្ពុជាតែងផ្តោតការយកចិត្តទុកដាក់ពីការងារពិការភាពធ្វើយ៉ាងណាឲ្យមានគុណភាព ជីវិតល្អ និងពេញលេញ ...</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://cdn.sabay.com/cdn/media.sabay.com/media/sabay-news/Sport-News/International-Sports/Freelancer-Sport/football(122)/66167c492f12d_1712749620_medium.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>ច្បាស់​ណាស់​ម្នាក់ៗ​មាន​ដំណើរ​ជីវិត មាន​សាច់​រឿង​ជីវិត ការ​ប្រកប​ការងារ ឬ​របរ​អាជីវកម្ម​មិន​ដូច​គ្នា​ទាំង​ស្រុង​ទេ។ ជីវិត​យើង​ម្នាក់ៗ​នេះ បើ​ប្រៀបធៀប​សាច់​រឿង​ទៅ​នឹង​រឿង​កុន គឺ​ទាមទារ​ឲ្យ​មាន​អ្នក​ផលិត</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6W3wfuelQ9sDfqbaCuwEILAf1KCBVeBbkgg&s" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>សហភាពសហព័ន្ធយុវជនកម្ពុជា ប្តេជ្ញាបន្តចូលរួមទទួលខុសត្រូវ ចំពោះជោគជាតិ ជាមួយរាជរដ្ឋាភិបាល AMS</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0y1M48YEygz1ci0e7CswITl1GB0ARCr27Ww&s" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>សហភាពសហព័ន្ធយុវជនកម្ពុជា (ស.ស.ស.ក) : លោក ហ៊ុន ម៉ានី បានរំលេចបន្ថែមអំពីសារប្រយោជន៍នៃការពង្រឹងសមត្ថភាពរបស់យុវជនធ្វើយ៉ាងណាឱ្យថ្នាក់ដឹកនាំ មើលឃើញពីសមត្ថភាពក្នុងការដឹកនាំយុវជនបន្តវេន</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://lh6.googleusercontent.com/proxy/4pnpqO2CfSMHLK4ECLLu11q0PJgnZkir00RQrPEYUfjXgHLjc0s9z_QxW9ChYFdn9z7tn7drk2WJkHbUQ7P9_kh8qNCQ7m4UTRd7OgZIXMUb0fUXJDKO3HQsqFM" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>ភ្នំពេញ៖ បើតាមខ្លឹមសារក្នុងសៀវភៅថវិកាសង្ខេបឆ្នាំ២០២២ដែលក្រសួងសេដ្ឋកិច្ចនិងហិរញ្ញវត្ថុ ដាក់បង្ហាញក្នុងវេទិកាសាធារណៈស្តីពី «ការគ្រប់គ្រងម៉ាក្រូសេដ្ឋកិច្ច និងច្បាប់ថវិកាឆ្នាំ២០២២» </h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://www.cpp.org.kh/wp-content/uploads/2025/03/151798.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>ឯកឧត្តម ឧបនាយករដ្ឋមន្ត្រី ហ៊ុន ម៉ានី៖ អតីតកាល ទីអារាមជាកន្លែងធ្វើទារុណកម្ម កន្លែងធ្វើជី ឃ្លាំងគ្រាប់ កន្លែងកងទ័ពស្នាក់នៅ និងដាំបន្លែចិញ្ចឹមសត្វ</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://pressocm.gov.kh/wp-content/uploads/2024/02/photo_2024-02-26_16-49-39.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>សម្តេចធិបតី ហ៊ុន ម៉ាណែត បានថ្លែងថា រាជរដ្ឋាភិបាលកម្ពុជា បានកំពុងយកចិត្តទុកដាក់ខ្ពស់លើវិស័យអប់រំកាយ និងកីឡា តាមរយៈការជំរុញលើកទឹកចិត្ត និងការផ្តល់ការឧបត្ថម្ភគាំទ្រគ្រប់រូបភាព</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtuaLVgVp_tCVaXtLCltNVzz2DQ2hpZ9Mlow&s" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>ស.ស.យ.ក. បានចូលរួមលើកកម្ពស់សមត្ថភាព ជំនាញ ផលិតភាព ចំណេះដឹង និងបំណិនជីវិតដល់យុវជន ដើម្បីឆ្លើយតបទៅនឹងតម្រូវការជាក់ស្ដែងនៃបរិបទសង្គម ...</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://pppkhmer.sgp1.digitaloceanspaces.com/image/main/20261/21_1_2026_a268.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>ភ្នំពេញ៖ ឈាមក្រហមហូរស្រក់យឺតៗចេញពីសរសៃ​គន្លាក់​ដៃ​ តាមទុយោ​ស​ថ្លា មកស្តុកយ៉ាង​ស្ងៀមស្ងាត់នៅក្នុងថង់ឈាម​។ វា​គ្មានសំឡេង​ គ្មានភាពរំភើប ប៉ុន្តែក្នុងថង់តូចមួយនោះ កំពុងផ្ទុកនូវអ្វីដែលមន្ទីរពេទ្យមិនអាចខ្វះបាន គឺជាជីវិត។</h6></div>
+          </div>
+        </div>
+      </div>
+      
+
+     
+    </div>
+
+   
+    <div class="col-lg-4 d-none d-md-block">
+      <div  style="height:900px;">
+         <div class="row h-100">
+                     <div class="d-flex flex-column gap-2">
+                        <div class="d-flex  p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREA1fdb46h5WxfNw1rdNeT2UvJH4Ktxk1hcw&s"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>មជ្ឈមណ្ឌលបច្ចេកវិទ្យាសហគមន៍ ពង្រឹងសមត្ថភាពជំនាញឌីជីថលដល់អ្នកជនបទ</h6>
+                         </div>
+
+                        </div>
+                        <div class="d-flex  p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfiXOovjkdGhJQ7MuDbGSVHdHNRxtWN8_8Gg&s"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>MSJTV NEWS: លោកជំទាវបណ្ឌិត ពេជ ចន្ទមុន្នី ចែករំលែកចំណេះដឹង បទពិសោធជីវិត និងការងារ ដែល</h6></div>
+                        </div>
+                        <div class="d-flex p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-VQdssa-QTGL_ghQWLgUpPuzw0Htsw2n-qQ&s"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>អ្នកនាំពាក្យក្រសួងការងារ​ និងអ្នកវិភាគសេដ្ឋកិច្ចលើកឡើងថា យុវជនត្រូវមានជំនាញមួយយ៉ាងតិចប្រចាំជីវិត</h6></div>
+                        </div>
+                        <div class="d-flex  p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCT9TrYBszB6HEHc0wFoggTXBloEfIeUWr-A&s"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div style="width: 80%; height: 50px;"><h6>រដ្ឋមន្ត្រីក្រសួងបរិស្ថាន ចុះសួរសុខទុក្ខ និងសំណេះសំណាលជាមួយនាយទាហាន ពលទាហាននៅទីបញ្ជាការដ្ឋានយោធ</h6></div>
+                        </div>
+                        <div class="d-flex  p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdaKV5gC7PWFNoh3Yw83KSQrldzjkBVnux3A&s"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>ពង្រឹងកិច្ចសហប្រតិបត្តិការរវាងវៀតណាម ជាមួយឡាវ និងកោះសូឡូម៉ុន</h6></div>
+                        </div>
+                        <div class="d-flex  p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhAt6iufhgn3XayolQNyN5Az0xibX92e0DRQ&s"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>ឯកឧត្ដមបណ្ឌិត ហ៊ឺ វីរៈ និងលោកជំទាវ យី សុភា រៀបចំពិធីក្រុងពាលីសាងសង់ «មជ្ឈមណ្ឌលវីរៈសុភា» ដើម្បី</h6></div>
+                        </div>
+                        <div class="d-flex  p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWKeOu4OM_dNP_ZMiawfnM-nsjradWwjNmqg&s"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>បើជីវិតបានល្អប្រសើរហើយអ្នកបានជួយសង្គមហើយ</h6></div>
+                        </div>
+                        <div class="d-flex p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU-x-AnOhLgntuBTLg2lQes5bBwt-kgizIDg&s"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>ស្នងការខេត្តរតនគិរី បញ្ជារយ៉ាងម៉ឹងម៉ាត់ ពង្រឹងការអប់រំ និងអនុវត្តច្បាប់ចរាចរណ៍ ដើម្បីការពារជីវិត បង្កើតវប្ប</h6></div>
+                        </div>
+                        <div class="d-flex p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvtTDg_QHjkXS2iIcNlSh806f8mNOmlg4pKQ&s"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>ថ្ងៃឈប់សម្រាក នៃពិធីបុណ្យអុំទូកថ្ងៃទី២ បងប្អូនពលរដ្ឋកុះករ បន្តដើរលេងកម្សាន្ត – TSK News</h6></div>
+                        </div>
+                        <div class="d-flex  p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjZGOIn4fDOH7BUN1ihwFsdd0LoubPUoB1aQ&s"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>ការរក្សាឱ្យបាននូវសុខសន្តិភាពនិងស្ថិរភាពសង្គម អនុញ្ញាតឱ្យសង្គមជាតិអាចគិតគូរអំពីការអភិវឌ្ឍ និង</h6></div>
+                        </div>
+                        <div class="d-flex  p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://storage.googleapis.com/rnk/a23-92.jpg"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>ការរក្សាឱ្យបាននូវសុខសន្តិភាពនិងស្ថិរភាពសង្គម អនុញ្ញាតឱ្យសង្គមជាតិអាចគិតគូរអំពីការអភិវឌ្ឍ និង</h6></div>
+                        </div>
+                        <div class="d-flex  p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTurx_-ZEIrNotxVBZ24MkUMJhLo_LbpC2EDA&s"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>អេ អាយ អេ ខេ​ម​បូ​ឌា ណែនាំ​ជា​ផ្លូវការ “​កម្មវិធី WorkWell with AIA” អនាគត​បទដ្ឋាន​កន្លែងការងារ​គំរូ</h6></div>
+                        </div>
+                        <div class="d-flex p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://image.freshnewsasia.com/2021/id-025/fn-2024-02-18-10-33-00-0.png"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>លោកជំទាវបណ្ឌិត ពេជ ចន្ទមុន្នី ចែករំលែកចំណេះដឹង បទពិសោធជីវិត និងការងារ ដើម្បីជាត្រីវិស័យចង្អុលទិស</h6></div>
+                        </div>
+                      </div>
+                </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="container-fluid footer" style="height:380px; background:#000;color: #fff; margin-top:2%;">
+  <div class="row h-100">
+    <div class="col-lg-4 col-12 d-flex flex-column justify-content-center align-items-center">
+      <img src="./photo_2026-04-03_09-57-54.jpg" style="max-width:130px;">
+      <h6>© រក្សាសិទ្ធគ្រប់យ៉ាងដោយSabay ឆ្នាំ២០២៦ <br> គោលការណ៍ភាព| Privacy Policy  <br><br>
+         អាសយដ្ធាន <br> អគ្គាលេខ ៣០៨ មហាវិថីព្រះមុន្នីវង្ស <br>
+        សង្កាតបឹងរាំង ខណ្ឌដូនពេញ</h6>
+    </div>
+  
+     <div class=" col-lg-4  d-none d-lg-flex justify-content-center align-items-center text-white text-center ">
+      <div>
+        <h5>អំពីយើង</h5>
+        <h6>Sabay Digital Corporation ជាក្រុមហុនព័ត៏មានឌីជីថល <br> និនកម្សាន្តឈានមុខគេ នៅកម្ពុជា ។ ព័ត៏មានបន្ថែម <br>
+        ផលិតផល និង សេវាកម្ម របស់Sabay</h6>
+        <img src="https://news.sabay.com.kh/img/logo.png"style="width: 40px;height: 40px;">
+        <img src="https://media-src.sabay.com/mysabay_user/logo_picture/1764651755559-pm31sd9.png"style="width: 40px;height: 40px;">
+        <img src="https://kleykley.sabay.com.kh/img/logo.png"style="width: 40px;height: 40px;">
+        <img src="https://der.sabay.com.kh/img/logo.png"style="width: 40px;height: 40px;">
+        <img src="https://cdn.sabay.com/cdn/media.sabay.com/media/publications/logos/61d5007946e0b_1641349200_small.png"style="width: 40px;height: 40px;">
+        <img src="https://cdn.sabay.com/cdn/media.sabay.com/media/publications/logos/61d501f25761a_1641349560_small.png"style="width: 40px;height: 40px;">
+        <img src="https://cdn.sabay.com/cdn/media.sabay.com/media/publications/logos/61d50338ea098_1641349920_small.png"style="width: 40px;height: 40px;">
+        <img src="https://business.sabay.com.kh/img/logo.png"style="width: 40px;height: 40px;">
+        <img src="https://cdn.sabay.com/cdn/media.sabay.com/media/publications/logos/61d4f62a95ade_1641346560_small.png"style="width: 40px;height: 40px;">
+      </div>
+    </div>
+    <div class="col-lg-4 col-12 d-flex justify-content-center align-items-center text-white text-center">
+      <div>
+       <h5>ជួបគ្នានៅបណ្ដាញសង្គម</h5>
+       <h6>ទំនាក់ទំនង</h6>
+       <i class="bi bi-facebook"></i>
+       <i class="bi bi-youtube"></i>
+       <i class="bi bi-instagram"></i>
+       <i class="bi bi-tiktok"></i>
+       <i class="bi bi-telegram"></i>
+       <h6>info@sabay.com</h6>
+       <h6>023 228 000</h6>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  function toggleMenu(){
+    document.getElementById("menu").classList.toggle("show");
+}
+</script>
+</body>
+</html>

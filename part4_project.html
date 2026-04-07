@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+ <!-- <link rel="stylesheet" href="./first_project.css"> -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer&display=swap" rel="stylesheet">
+</head>
+<style>
+    body{
+  font-family: 'Noto Sans Khmer', sans-serif;
+  min-height: 100vh;
+}
+
+@media (max-width: 576px){
+
+  .box1-wrap{
+    flex-direction: column !important;
+    height: auto !important;
+  }
+
+  .group-1{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .group-1 > .item{
+    width: 50%;
+  }
+
+  .small-box{
+    flex-direction: column !important;
+  }
+
+  .small-box .img{
+    width: 100% !important;
+    height: 70px;
+  }
+
+  .small-box .text{
+    width: 100% !important;
+    height: auto;
+  }
+  
+}
+
+.box{
+  transition: 0.4s;
+}
+.box img:hover{
+  transform: scale(0.98);
+  color: #000;
+}
+.desktop-menu {
+    display: block;
+}
+.mobile-menu {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    .desktop-menu {
+        display: none; /* hide desktop menu */
+    }
+    .mobile-menu {
+        display: block; /* show mobile menu */
+    }
+}
+
+.topbar{
+    height:70px;
+    background:black;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+   
+    
+}
+
+.menu-btn{
+    position:absolute;
+    left:15px;
+    font-size:25px;
+    color:white;
+    cursor:pointer;
+}
+
+
+.menu-box{
+    position:fixed; 
+    top:60px;
+    left:0;
+    width:100%;
+    background:red;
+    z-index:9999;
+    max-height:0;
+    overflow:hidden;
+    transition:0.4s ease;
+}
+
+.menu-box.show{
+    max-height:290px;
+}
+
+.menu-item{
+    padding:15px;
+    color:white;
+    display:block;
+    text-decoration:none;
+}
+.hover{
+  transition: 0.4s;
+}
+.hover img:hover{
+  transform: scale(0.98);
+  color: #000;
+}
+.mobile-menu a:hover{
+  background-color: rgb(88, 11, 11);
+}
+</style>
+<body>
+    <section class="desktop-menu w-100">
+  <div class="w-100 bg-black py-2">
+    <img src="https://news.sabay.com.kh/img/logo.png" class="ms-5" style="width: 100px; height: 100px;">
+  </div>
+  <div class="w-100 bg-danger">
+    <div class="d-flex align-items-center gap-4 p-3 ms-5">
+      <a href="./first_project.html" class="text-white text-decoration-none"data-target><i class="bi bi-house-door-fill"></i></a>
+      <a href="./part1_project.html" class="text-white text-decoration-none"data-target>កម្សាន្ត</a>
+      <a href="./part2_project.html" class="text-white text-decoration-none"data-targrt>បច្ចេកវិទ្យា</a>
+      <a href="./part3_project.html" class="text-white text-decoration-none"data-target>ជីវិតនិងសង្គម</a>
+      <a href="#" class="text-white text-decoration-none"data-target>កីឡា</a>
+      <a href="#" class="text-white text-decoration-none"data-target>AUTO TALK</a>
+    </div>
+  </div>
+</section>
+
+<div class="mobile-menu">
+  <div class="topbar">
+      <div class="menu-btn" onclick="toggleMenu()">☰</div>
+      <img src="https://news.sabay.com.kh/img/logo.png" style="width: 50px;height: 50px;">
+  </div>
+
+  <div id="menu" class="menu-box">
+      <a href="./first_project.html" class="menu-item"><i class="bi bi-house-door-fill"></i></a>
+      <a href="./part1_project.html" class="menu-item">កម្សាន្ត</a>
+      <a href="./part2_project.html" class="menu-item">បច្ចេកវិទ្យា</a>
+      <a href="./part3_project.html" class="menu-item">ជីវិតនិងសង្គម</a>
+      <a href="#" class="menu-item">កីឡា</a>
+      <a href="#" class="menu-item">AUTO TALK</a>
+  </div>
+</div>
+<div class="container-fluid"style=" width: 95%;margin-top:15px;">
+  <div class="row">
+    <div class="col-lg-8 " style="box-shadow: 1px 1px  2px 1px rgb(167, 163, 163);">
+
+      <div class="d-flex gap-3 box1-wrap " style="height:300px; ">
+        
+       
+        <div class="flex-fill d-flex flex-column box bg-dark">
+          <div style="height:70%;">
+            <img src="https://olympiccambodia.com/storage/images/posts/691f306edb23e.jpg"
+            style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div style="height:30%; background-color:white;"><h6>ដោយទទួលបានការអនុញ្ញាតពីរាជរដ្ឋាភិបាលកម្ពុជា ក្រុមអត្តពលិកចំនួន ២១ ប្រភេទកីឡារបស់ កម្ពុជានឹងចូលរួមប្រកួតប្រជែងក្នុងព្រឹត្តិការណ៍ កីឡាអាស៊ីអាគ្នេយ៍ ឆ្នាំ២០២៥ នៅប្រទេសថៃ  ដែលនឹងប្រព្រឹត្តទៅពីថ្ងៃទី ៣ ដល់ថ្ងៃទី ២០ ខែ ធ្នូ ខណៈពិធីបើកជាផ្លូវការនឹងធ្វើឡើងនៅថ្ងៃទី ៩ ខែ ធ្នូ។</h6></div>
+        </div>
+        <div class="flex-fill d-flex flex-column box bg-dark">
+          <div style="height:70%;">
+            <img src="https://cdn.cc-times.com/kh.cc-times.com/media/67022/large/530342353_1290373685785964_6682027765870711745_n.jpg?1754981040"
+            style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div style="height:30%; background-color:white;"><h6>អ្នកនាង ស្រួង ភាវី កីឡាការិនីប៊ីយ៉ាការ៉ុមកម្ពុជា នាថ្ងៃទី១០ សីហានេះ បានឈ្នះពានរង្វន់ថ្មី១គ្រឿងទៀត ក្នុងកម្មវិធីLPBA Charity Championship ដែលជាការឈ្នះពានលើកទី៩ក្នុងកម្មវិធីនេះ ដោយលើកនេះប្រកួតឈ្នះលើជើងឯកកូរ៉េខាងត្បូង។ ជាជ័យជម្នះក្រោមស្មារតីជាតិ និងភាពឈឺចាប់របស់ប្រជាជន</h6></div>
+        </div>
+        
+
+        
+
+      </div>
+
+      <!-- GROUP 1 -->
+      <div class="group-1 mt-2">
+
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCKvP5QD90Lz8KJFqji_jQo9ZcC99fOfOX0Q&s" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>និយមន័យនៃពាក្យថាកីឡា គឺជាការប្រកួតប្រជែង ដោយប្រើបច្ចេកទេស កម្លាំងកាយ និងកម្លាំងប្រាជ្ញាដើម្បីទទួលបានជោគជ័យ។ វចនានុក្រមរបស់ សម្ដេចព្រះសង្ឃរាជ ជួន ណាត បានឲ្យនិយមន័យ ពាក្យនេះ ថាជាការលេងល្បែងកម្សាន្ដ</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://nsc.gov.kh/wp-content/uploads/2024/09/Wong-R1.webp" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6></h6>លោក វ៉ាត់ ចំរើន បាន​បញ្ជាក់​បន្ថែម​ថា បើទោះ​បី​ជា​ថៃ​មិន​បញ្ជូន​កីឡាករ​មក​ចូលរួម​ការ​ប្រកួត​គុន​ខ្មែរ​ក្នុង​កីឡា​ស៊ីហ្គេម​ក្តី ក៏​នៅ​មាន​ប្រទេស​យ៉ាង​ហោច​ណាស់​បួន​បាន​កំណត់​មក​ចូល​រួម ហើយ​ក៏​មាន​</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://gdb.voanews.com/09320000-0a00-0242-3c3b-08dafee25a71_cx0_cy12_cw96_w408_r1_s.jpeg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>ភ្នំពេញ — អគ្គលេខាធិការ​គណៈកម្មាធិការ​ជាតិ​រៀបចំ​ការ​ប្រកួត​កីឡាអាស៊ី​អាគ្នេយ៍ ហៅ​កាត់ថា​ SEA Games (ស៊ីហ្គេម) ​លើក​ឡើង​ថា កម្ពុជា​នឹង​ប្រកួត​កីឡា​គុនខ្មែរ​ក្នុងស៊ីហ្គេម​ឆ្នាំ​ ២០២៣ ជាមួយ​បណ្តា​</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://jianhua.sgp1.cdn.digitaloceanspaces.com/2024/11/d3697ed6-800x601.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>ការប្រកួត​កីឡាជាតិ​លើកទី៤ និងកីឡាជាតិ​ជនពិការ​លើកទី២ បានបញ្ចប់ទៅ​ដោយជោគជ័យ និងធ្វើពិធី​បិទជាផ្លូវការ​នៅពហុកីឡដ្ឋានជាតិ​អូឡាំពិក កាលពីល្ងាច​ថ្ងៃទី៨ ខែវិច្ឆិកា ឆ្នាំ២០២៤ ក្រោមអធិបតីភាព​របស់​លោកបណ្ឌិតសភាចារ្យ ហង់ជួន ណារ៉ុន</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://s3.ams.com.kh/education/2023/05/1-12-scaled.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>
+ការលេងកីឡាអាចជួយឱ្យអ្នកមានរាងស្អាត កើនចំណងមិត្តភាព មានទំនាក់ទំនងល្អជាមួយមនុស្សជុំវិញខ្លួន និងមានសុខភាពល្អ។ តាមរយៈការហ្វឹកហាត់កីឡាផ្សេងៗ អ្នកក៏អាចទទួលបានជំនាញនៅលើទីលាន របៀបដោះស្រាយបញ្ហាក្នុងជីវិតរស់នៅផងដែរ។ ជាពិសេស កីឡាកំពុងមានឥទ្ធិពលយ៉ាងខ្លាំង មកលើជីវិតប្រចាំថ្ងៃ និងសុខ</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://b1949157.smushcdn.com/1949157/wp-content/uploads/2025/11/IMG_0469-1964x1350.jpeg?lossy=1&strip=1&webp=1" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>កម្ពុជាបានសម្រេច​ជា​ចុងក្រោយ ក្នុងការ​បញ្ជូនប្រតិភូកីឡា​​របស់ខ្លួនចំនួន ២១ ប្រភេទ ឱ្យ​ទៅចូលរួមការ​ប្រកួត​កីឡាស៊ីហ្គេម លើក​ទី៣៣ ឆ្នាំ​២០២៥ ដែលប្រទេស​ថៃ ធ្វើ​ជា​ម្ចាស់​ផ្ទះ ពី​ថ្ងៃទី៩ ដល់​ទី២០ ខែធ្នូ ប៉ុន្តែ</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFJM6ZwmGesw7NtNEiUnui_aKRDtw0durdwg&s" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>ការយកចិត្ដទុកដាក់​​​ចំពោះសុខភាព​​​គឺ​ជារឿង​​​មួយដ៏សំខាន់​​​សម្រាប់​​​លោកអ្នក ជាពិសេស​​​សម្រាប់​​​លោកអ្នក​​​​ដែលចង់បាននូវ​​​សុខភាពល្អ។ ការលេងកីឡា​​​​តែងតែ​​​ទទួលបាន​​​នូវគុណសម្បត្ដិ​ច្រើនជាង​​​គុណវិបត្ដិ ដោយការលេងមានសភាពខុសៗគ្នា ទៅតាមប្រភេទកីឡានីមួយៗ។</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZUFlIHMvkL-bHaOsGnPs9iLUkK6zwEI5Psg&s" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>ភ្នំពេញ៖ ទោះបីជា​កីឡា​គុនដាវ​ដែល​គេ​និយម​ហៅថា​ចាក់សាប​មិនសូវមាន​គេ​ស្គាល់ និង​ខ្វះ​ការនិយម​នៅ​កម្ពុជា​ក្តី កីឡាករ​កម្ពុជា​ជំនាន់​ថ្មី​ចំនួនបីនាក់​បាន​ទទួល​ពាន់រ​ង្វាន់​មេដាយ​សំរិត​ពី​ការ​ប្រកួត​ជើង​ឯក​គុណ​ដាវ​យុវជន​អាស៊ីអាគ្នេយ៍​ឆ្នាំ២០១៣ លើ​វិញ្ញាសារ​មួយ​នេះ ក្នុងប្រទេស​ព្រុយ​ណេ​កាលពី​</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpeqOtcDZHEqGkwp5o-NhhD2hY6-fJeRfcQA&s" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>ក្រុមកីឡាការិនីកម្ពុជា បានយកឈ្នះឡាវ និងហ្វីលីពីន ដើម្បីឈានទៅប្រកួតដណ្តើមមេដាយមាស នៅថ្ងៃស្អែក -</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://cbssport.com.kh/wp-content/uploads/2023/05/5-3-800x600.jpeg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>លោក Austin Coledole អគ្គលេខាធិការ សហព័ន្ធកីឡាបាល់បោះកម្ពុជា បានមានប្រសាសន៍ថា ក្រុមរបស់កម្ពុជា បានជូបឧបសគ្គជាច្រើន ក្នុងព្រឹត្តិការណ៍ស៊ីហ្គេមនេះ ប៉ុន្តែដោយសារតែទទួលបានការជួយគាំទ្រពី OCIC ក៏ដូចជាខាង</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv6ik6VfAyfdnXlENbg19qQBpc0vz76us9cg&s" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>កម្ពុជា​ត្រៀម​បញ្ជូន​កីឡាករ​កីឡាការិនី​៣នាក់​ទៅ​ប្រកួត​កីឡា ​អូឡាំពិក​នៅ​​ជប៉ុន</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://image.freshnewsasia.com/2021/id-155/fn-2025-12-11-14-35-40-1.png" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>មូលនិធិនេះបង្កើតឡើងដោយជំនួយឥតសំណងចំនួន ២០លានដុល្លារអូស្ត្រាលី ពីមូលនិធិអូឡាំពិកអូស្ត្រាលី Australian Olympic Foundation (AOF) នឹងផ្តល់ប្រាក់ចំនួន ៥.០០០ដុល្លារអូស្ត្រាលី ដល់អត្តពលិកគ្រប់រូបដែលត្រូវបានជ្រើសរើសសម្រាប់ចូលរួមប្រជែង</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBLDMu-QxGu_DmAqOmdObkthmjm3032bUu3A&s" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>កីឡាអូឡាំពិចរដូវក្តៅជាអ្វី? មកដឹងអំពីអត្ថន័យរបស់ កងទាំង៥លើទង់ ព្រឹត្តិការណ៍អូឡាំពិច</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc2FYv5kp3CN2KP0H0Q0_PVeog_-eRi_-p7w&s" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>ការប្រកួតកីឡាខ្មែរហាប់គីដូ ជើងឯកថ្នាក់ជាតិលើកទី២ ទទួលបានភាពជោគជ័យ ដោយមានការ ចូលរួមពីកីឡាករ</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://image.freshnewsasia.com/2021/2026/03/fn-2026-03-03-04-49-18-817.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>(ភ្នំពេញ)៖ ស្របពេលដែលទង់ជាតិខ្មែរកាន់តែលេចធ្លោលើឆាកអន្តរជាតិ កីឡាករ-កីឡាការិនីកាន់តែមានសមត្ថភាព អាចដណ្តើមយកជើងឯកពីព្រឹត្តិការណ៍ខ្នាតអន្តរជាតិជាបន្តបន្ទាប់ ក្រុមហ៊ុន ខ្មែរ ប៊ែវើរីជីស បានប្រកាសឧបត្ថម្ភបន្ថែម ៥០០លានរៀល ទៅសហព័ន្ធកីឡា</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://www.cnc.com.kh/news/c36caba8532eaf954d983d0d981bf307.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>កម្ពុជា អាចនឹងដំណើរការសហព័ន្ធបាល់គប់ ឡើងវិញ បន្ទាប់ពីអវត្តមានជិត២០ឆ្នាំ ដើម្បីលើកកម្ពស់វិស័យកីឡាឱ្យកាន់តែរីកចម្រើន - CNC News</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1Ag1c7u-wjYGpspyYrtxqAOBZN6GdW2IL6A&s" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>ដោយនៅសល់តែ ៨ ថ្ងៃទៀតប៉ុណ្ណោះ រហូតដល់ពិធីបើកព្រឹត្តិការណ៍កីឡាអូឡាំពិករដូវរងា Milano Cortina ឆ្នាំ ២០២៦ ការរាប់ថយក្រោយចុងក្រោយបានចាប់ផ្តើមហើយ! នៅពេលដែលអណ្តាតភ្លើងអូឡាំពិកត្រូវបានបំភ្លឺជាលើកដំបូងនៅក្នុងទីក្រុងពីរគឺ</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://www.cngtvcambodia.com/uploads/images/2023/Feb/image_750x_63fc1aa628bac.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6></h6>ថ្មីៗនេះកីឡាករ និងកីឡាការិនីកម្ពុជា បានប្រកួតកីឡាជឺជីតស៊ូជ្រើសរើសជើងឯកអាស៊ី លើកទី៧ ឆ្នាំ២០២៣ នៅប្រទេសថៃ ក្រុមអត្តពលិកកីឡាជឺជីតស៊ូកម្ពុជា ដណ្ដើមបានមេដាយ ៣គ្រឿង រួមមានមេដាយប្រាក់ ២ និងសំរឹទ្ធ ១ កាលពីថ្ងៃទី២៥ ខែកុម្ភៈ ឆ្នាំ២០២៣ ។</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGNLP_AWQZT0ZZvHaAtQIM9kW_dld6mHIzOw&s" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>BizKhmer - ក្រុមកីឡាបាល់ទឹកបុរសកម្ពុជា បង្កើនជំនាញក្នុងវគ្គបណ្តុះបណ្តាលនៅប្រទេសសិង្ហបុរី</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGU5Lqx0AvXZ-tTLJW7Tva1LVDYYaGEuOeqA&s" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>កាសែតម៉ាឡេស៊ី៖ «យើងចាញ់វៀតណាមរួចហើយ មុនពេលបាល់ចាប់ផ្តើមវាយបកទៅទៀត»។</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQwZ6n4WyV0lljEn65ptaX2sWF-wYkkTtBow&s" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>ភ្នំពេញ ប៉ុស្ដិ៍ | Post Khmer | ​កម្ពុជា ហាក់​សង្ឃឹម​រកបានមេដាយអូឡាំពិក ជាប្រវត្តិសាស្រ្ត នៅ​អាមេរិក ហើយ​អ្នក​</h6></div>
+          </div>
+        </div>
+
+      </div>
+      
+
+     
+    </div>
+
+   
+    <div class="col-lg-4 d-none d-md-block">
+      <div  style="height:900px;">
+         <div class="row h-100">
+                     <div class="d-flex flex-column gap-2">
+                        <div class="d-flex  p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqjqkcUjZFO8dIfmyQegXIfLdITAYLRZDBrA&s"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>កីឡាករបាល់ទាត់ឆ្នើម ៧ រូប មានជាងគេបំផុត លើពិភពលោក</h6>
+                         </div>
+                        </div>
+                        <div class="d-flex  p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://static.information.gov.kh/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMnY3QXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--98fd3a7a943463a8440d525ea7951a128d0241cb/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNT1RBd2VEWXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--70cbddbba2e46c7ca8ac0c1f8b8316d88752e16d/86859E14-5A14-4C88-9E4A-D2AB147.jpeg"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>កីឡាជាតិលើកទី៣ គឺជាផ្នែកមួយនៃផែនការយុទ្ធសាស្រ្ត របស់សហព័ន្ធកីឡាទូក ត្រៀមស៊ីហ្គេម ឆ្នាំ២០២៣ - ក្រសួង</h6>
+                         </div>
+                        </div>
+                        <div class="d-flex  p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTR9jpsoCO7D986aSJOeiFM4lJ5N56-bCoA3w&s"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>មានហេតុផលចំនួន ៥ ដែលធ្វើឱ្យកីឡាករបាល់ទាត់ល្បីៗកម្ពុជា ព្យាយាមលាក់បាំងតម្លៃខ្លួន </h6>
+                         </div>
+                        </div>
+                        <div class="d-flex  p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIogOZtIzlr6S6ON5udQm6kBZLIfbOyf-FmQ&s"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>ការ​ប្រកួត​កីឡា​ស៊ី​ហ្គេម​ចាប់ផ្ដើម​លើ​វិញ្ញាសា​ចំនួន​៣ – វិទ្យុអាស៊ីសេរី</h6>
+                         </div>
+                        </div>
+                        <div class="d-flex  p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://kptmedia.ap-south-1.linodeobjects.com/2025/12/Cambodian-Sport-Delegaton-to-SEA-GAMES-2025-23-1024x683.jpg"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>ក្រោយ​បាល់ទះ​ដក​ខ្លួន កីឡា​កម្ពុជា ១២ ​ប្រភេទ​ភាគ​ច្រើន​មិន​មែន​ក្រុម​ ​ទៅ​ប្រកួត​ស៊ីហ្គេម​ នៅ​ថៃ</h6>
+                         </div>
+                        </div>
+                        <div class="d-flex  p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaYpiKkTtONKk8dbw_k2oMcBxW8br2uC-T_Q&s"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>កីឡាការិនីវាយកូនបាល់ Sophia Phuong Anh បានវិលត្រឡប់មកវិញយ៉ាងគួរឱ្យចាប់អារម្មណ៍ បន្ទាប់ពី</h6>
+                         </div>
+                        </div>
+                        <div class="d-flex  p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://cdn.cc-times.com/kh.cc-times.com/media/40433/large/photo_2023-11-17_20-43-23.jpg?1700282334"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>អត្តពលិកចំនួន ២៦រូបដណ្តើមបានមេដាយ នៅស៊ីហ្គេម ជាប់បាក់ឌុបស្វ័យប្រវត្តិ - សុីសុីថាមស៍</h6>
+                         </div>
+                        </div>
+                        <div class="d-flex  p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://imgtvk.sgp1.digitaloceanspaces.com/wp-content/uploads/2024/12/23140838/Thumnails-TVK-Web-Facebook-with-Sponsor-copy-93-1093x580.jpg"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>ការប្រកួតកីឡាខ្មែរហាប់គីដូ ជើងឯកថ្នាក់ជាតិលើកទី២ ទទួលបានភាពជោគជ័យ ដោយមានការ ចូលរួមពីកីឡាករ</h6>
+                         </div>
+                        </div>
+                        <div class="d-flex  p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://cdn.cc-times.com/kh.cc-times.com/media/55059/large/%C2%AB%E1%9E%80%E1%9E%B8%E1%9E%A1%E1%9E%B6%E1%9E%80%E1%9E%9A_%E1%9E%80%E1%9E%B8%E1%9E%A1%E1%9E%B6%E1%9E%80%E1%9E%B6%E1%9E%9A%E1%9E%B7%E1%9E%93%E1%9E%B8%C2%BB%E1%9E%9F%E1%9E%9A%E1%9E%BB%E1%9E%94%E1%9E%87%E1%9E%B6%E1%9E%84_%E1%9F%A4%E1%9E%96%E1%9E%B6%E1%9E%93%E1%9F%8B%E1%9E%93%E1%9E%B6%E1%9E%80%E1%9F%8B_%E1%9E%93%E1%9E%B9%E1%9E%84%E1%9E%85%E1%9E%BC%E1%9E%9B%E1%9E%9A%E1%9E%BD%E1%9E%98%E1%9E%96%E1%9F%92%E1%9E%9A%E1%9E%B9%E1%9E%8F%E1%9F%92%E1%9E%8F%E1%9E%B7%E1%9E%80%E1%9E%B6%E1%9E%9A%E1%9E%8E%E1%9F%8D%E1%9E%94%E1%9F%92%E1%9E%9A%E1%9E%80.jpg?1730348464"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>«កីឡាករ-កីឡាការិនី»សរុបជាង ៤ពាន់នាក់ នឹងចូលរួមព្រឹត្តិការណ៍ប្រកួតកីឡាជាតិលើកទី៤ - សុីសុីថាមស៍</h6>
+                         </div>
+                        </div>
+                        <div class="d-flex  p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfx7s3V4f4hmI-GrdFaJ600HubptS9edYzlQ&s"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>ការប្រកួតកីឡាខ្មែរហាប់គីដូ ជើងឯកថ្នាក់ជាតិលើកទី២ ទទួលបានភាពជោគជ័យ ដោយមានការ ចូលរួមពីកីឡាករ</h6>
+                         </div>
+                        </div>
+                        <div class="d-flex  p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://jianhua.sgp1.cdn.digitaloceanspaces.com/2024/10/4b6f52c2.jpg"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>ការប្រកួតកីឡាជាតិលើកទី៤ និងកីឡាជនពិការជាតិលើកទី២ នឹងធ្វើពិធីបើកផ្លូវការនៅល្ងាចស្អែក នាពហុកីឡ</h6>
+                         </div>
+                        </div>
+
+                      </div>
+                </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="container-fluid footer" style="height:380px; background:#000;color: #fff; margin-top:2%;">
+  <div class="row h-100">
+    <div class="col-lg-4 col-12 d-flex flex-column justify-content-center align-items-center">
+      <img src="./photo_2026-04-03_09-57-54.jpg" style="max-width:130px;">
+      <h6>© រក្សាសិទ្ធគ្រប់យ៉ាងដោយSabay ឆ្នាំ២០២៦ <br> គោលការណ៍ភាព| Privacy Policy  <br><br>
+         អាសយដ្ធាន <br> អគ្គាលេខ ៣០៨ មហាវិថីព្រះមុន្នីវង្ស <br>
+        សង្កាតបឹងរាំង ខណ្ឌដូនពេញ</h6>
+    </div>
+  
+     <div class=" col-lg-4  d-none d-lg-flex justify-content-center align-items-center text-white text-center ">
+      <div>
+        <h5>អំពីយើង</h5>
+        <h6>Sabay Digital Corporation ជាក្រុមហុនព័ត៏មានឌីជីថល <br> និនកម្សាន្តឈានមុខគេ នៅកម្ពុជា ។ ព័ត៏មានបន្ថែម <br>
+        ផលិតផល និង សេវាកម្ម របស់Sabay</h6>
+        <img src="https://news.sabay.com.kh/img/logo.png"style="width: 40px;height: 40px;">
+        <img src="https://media-src.sabay.com/mysabay_user/logo_picture/1764651755559-pm31sd9.png"style="width: 40px;height: 40px;">
+        <img src="https://kleykley.sabay.com.kh/img/logo.png"style="width: 40px;height: 40px;">
+        <img src="https://der.sabay.com.kh/img/logo.png"style="width: 40px;height: 40px;">
+        <img src="https://cdn.sabay.com/cdn/media.sabay.com/media/publications/logos/61d5007946e0b_1641349200_small.png"style="width: 40px;height: 40px;">
+        <img src="https://cdn.sabay.com/cdn/media.sabay.com/media/publications/logos/61d501f25761a_1641349560_small.png"style="width: 40px;height: 40px;">
+        <img src="https://cdn.sabay.com/cdn/media.sabay.com/media/publications/logos/61d50338ea098_1641349920_small.png"style="width: 40px;height: 40px;">
+        <img src="https://business.sabay.com.kh/img/logo.png"style="width: 40px;height: 40px;">
+        <img src="https://cdn.sabay.com/cdn/media.sabay.com/media/publications/logos/61d4f62a95ade_1641346560_small.png"style="width: 40px;height: 40px;">
+      </div>
+    </div>
+    <div class="col-lg-4 col-12 d-flex justify-content-center align-items-center text-white text-center">
+      <div>
+       <h5>ជួបគ្នានៅបណ្ដាញសង្គម</h5>
+       <h6>ទំនាក់ទំនង</h6>
+       <i class="bi bi-facebook"></i>
+       <i class="bi bi-youtube"></i>
+       <i class="bi bi-instagram"></i>
+       <i class="bi bi-tiktok"></i>
+       <i class="bi bi-telegram"></i>
+       <h6>info@sabay.com</h6>
+       <h6>023 228 000</h6>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  function toggleMenu(){
+    document.getElementById("menu").classList.toggle("show");
+}
+</script>
+</body>
+</html>
