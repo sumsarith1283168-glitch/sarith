@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer&display=swap" rel="stylesheet">
+
+<style>
+body{
+  font-family: 'Noto Sans Khmer', sans-serif;
+  min-height: 100vh;
+}
+
+@media (max-width: 576px){
+
+  .box1-wrap{
+    flex-direction: column !important;
+    height: auto !important;
+  }
+
+  .group-1{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .group-1 > .item{
+    width: 50%;
+  }
+
+  
+  .small-box{
+    flex-direction: column !important;
+  }
+
+  .small-box .img{
+    width: 100% !important;
+    height: 70px;
+  }
+
+  .small-box .text{
+    width: 100% !important;
+    height: auto;
+  }
+ 
+}
+
+.box{
+  transition: 0.4s;
+}
+.box img:hover{
+  transform: scale(0.98);
+  color: #000;
+}
+
+.desktop-menu {
+    display: block;
+}
+.mobile-menu {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    .desktop-menu {
+        display: none; /* hide desktop menu */
+    }
+    .mobile-menu {
+        display: block; /* show mobile menu */
+    }
+}
+
+.topbar{
+    height:70px;
+    background:black;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    
+   
+    
+}
+
+.menu-btn{
+    position:absolute;
+    left:15px;
+    font-size:25px;
+    color:white;
+    cursor:pointer;
+}
+
+
+.menu-box{
+    position:fixed; 
+    top:60px;
+    left:0;
+    width:100%;
+    background:red;
+    z-index:9999;
+    max-height:0;
+    overflow:hidden;
+    transition:0.4s ease;
+}
+
+.menu-box.show{
+    max-height:290px;
+}
+
+.menu-item{
+    padding:15px;
+    color:white;
+    display:block;
+    text-decoration:none;
+}
+.hover{
+  transition: 0.4s;
+}
+.hover img:hover{
+  transform: scale(0.98);
+  color: #000;
+}
+.mobile-menu a:hover{
+  background-color: rgb(88, 11, 11);
+}
+</style>
+</head>
+
+<body>
+ <section class="desktop-menu w-100">
+  <div class="w-100 bg-black py-2">
+    <img src="https://news.sabay.com.kh/img/logo.png" class="ms-5" style="width: 100px; height: 100px;">
+  </div>
+  <div class="w-100 bg-danger">
+    <div class="d-flex align-items-center gap-4 p-3 ms-5">
+      <a href="./first_project.html" class="text-white text-decoration-none"data-target><i class="bi bi-house-door-fill"></i></a>
+      <a href="#" class="text-white text-decoration-none"data-target>កម្សាន្ត</a>
+      <a href="./part2_project.html" class="text-white text-decoration-none"data-targrt>បច្ចេកវិទ្យា</a>
+      <a href="./part3_project.html" class="text-white text-decoration-none"data-target>ជីវិតនិងសង្គម</a>
+      <a href="./part4_project.html" class="text-white text-decoration-none"data-target>កីឡា</a>
+      <a href="#" class="text-white text-decoration-none"data-target>AUTO TALK</a>
+    </div>
+  </div>
+</section>
+<div class="mobile-menu">
+  <div class="topbar">
+      <div class="menu-btn" onclick="toggleMenu()">☰</div>
+      <img src="https://news.sabay.com.kh/img/logo.png" style="width: 50px;height: 50px;">
+  </div>
+
+  <div id="menu" class="menu-box">
+      <a href="./first_project.html" class="menu-item"><i class="bi bi-house-door-fill"></i></a>
+      <a href="#" class="menu-item">កម្សាន្ត</a>
+      <a href="./part2_project.html" class="menu-item">បច្ចេកវិទ្យា</a>
+      <a href="./part3_project.html" class="menu-item">ជីវិតនិងសង្គម</a>
+      <a href="./part4_project.html" class="menu-item">កីឡា</a>
+      <a href="#" class="menu-item">AUTO TALK</a>
+  </div>
+</div>
+
+<div class="container-fluid"style=" width: 95%;margin-top:15px;">
+  <div class="row">
+
+    <!-- LEFT -->
+    <div class="col-lg-8 " style="box-shadow: 1px 1px  2px 1px rgb(167, 163, 163);">
+
+      <!-- BOX1 -->
+      <div class="d-flex gap-3 box1-wrap " style="height:300px; ">
+        
+        <div class="flex-fill d-flex flex-column box bg-dark">
+          <div style="height:70%;">
+            <img src="https://cdn.sabay.com/cdn/media.sabay.com/media/Chin-Sopheak/TD-10/66c858c640ce2_1724405940_medium.jpg"
+            style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div style="height:30%; background-color: #fff;"><h6>តារាសម្តែងស្រីឆ្នើម ២រូប វិវត្តន៍ខ្លួនពីតារាសម្តែងទៅជាផលិតករភាពយន្ត - កម្សាន្ត មិនមែនជារឿងធម្មតានោះឡើយ សម្រាប់ការវិវត្តន៍ខ្លួនពីតារាសម្តែងអាជីព ទៅជាផលិតករភាពយន្ត</h6></div>
+        </div>
+
+        <div class="flex-fill d-flex flex-column box bg-dark">
+          <div style="height:70%;">
+            <img src="https://s3.ams.com.kh/infotainment/2024/12/Untitled-1-35.png"
+            style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div style="height:30%;background-color:#fff;"><h6>តារាល្បីៗប្រចាំប្រទេសកម្ពុជាច្រើនត្រៀមសម្ដែង “សាទរកម្ពុជា”...មិនមែនជារឿងធម្មតានោះឡើយ សម្រាប់ការវិវត្តន៍ខ្លួនពីតារាសម្តែងអាជីព ទៅជាផលិតករភាពយន្ត</h6></div>
+        </div>
+
+      </div>
+
+      <!-- GROUP 1 -->
+      <div class="group-1 mt-2">
+
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMqwiigHpFAwJ8iPG1CQE_4K5tdIQseUAZww&s" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>ជីវិតកម្សាន្ដតួភាពយន្តប៉ុន្មានរូប ធ្លាប់ជាអតីតម្ចាស់មកុដ និងតំណាងប្រទេសកូរ៉េ ប្រកួតលើឆាកអន្តរជាតិ តារាបង្ហាញម៉ូដកម្ពុជា កញ្ញា ភីយ៉ា វ៉េកា បានលើកពានរង្វាន់តារាឆ្នើមនៅទីក្រុងបាងកក ប្រទេសថៃ នៅក្នុងកម្មវិធីមួយឈ្មោះថា Thailand Digital Awards 2020 កាលពីពេលថ្មីៗនេះ។</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://cdn.sabay.com/cdn/media.sabay.com/media/sabay-news/Local-Entertainment/Mak-Sensonita/5e4b46a0aff77_1581991560_medium.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>អនាគត​ស្វាមី តូតា៖ តារា​ស្រុក​ខ្មែរ​គេ​ហ៊ាន​ចំណាយ​លើ​រៀប​ការ​អស់​ប៉ុន្មាន ខ្ញុំ​ក៏​ហ៊ាន​ចំណាយ​ប៉ុណ្ណឹង​ដែរ - កម្សាន្ត តារាបង្ហាញម៉ូដកម្ពុជា កញ្ញា ភីយ៉ា វ៉េកា បានលើកពានរង្វាន់តារាឆ្នើមនៅទីក្រុងបាងកក ប្រទេសថៃ នៅក្នុងកម្មវិធីមួយឈ្មោះថា Thailand Digital Awards 2020 កាលពីពេលថ្មីៗនេះ។</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://cdn.sabay.com/cdn/media.sabay.com/media/sabay-news/Local-Entertainment/Another-86/5e37e41a2bc54_1580721120_medium.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>តារាបង្ហាញម៉ូដដ៏​ស្រស់​ស្អាត​របស់​កម្ពុជា​មួយ​រូប លើកពានរង្វាន់តារាឆ្នើមនៅទីក្រុងបាងកក - កម្សាន្តតារាបង្ហាញម៉ូដកម្ពុជា កញ្ញា ភីយ៉ា វ៉េកា បានលើកពានរង្វាន់តារាឆ្នើមនៅទីក្រុងបាងកក ប្រទេសថៃ នៅក្នុងកម្មវិធីមួយឈ្មោះថា Thailand Digital Awards 2020 កាលពីពេលថ្មីៗនេះ។</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://cdn.sabay.com/cdn/media.sabay.com/media/sabay-news/Local-Entertainment/Another-103/5ec2400037fc4_1589788620_medium.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>តារា​សម្ដែង​ស្រី ហេង ស្រីពេជ្រ និង​តារា​ចម្រៀង​ប្រុស ខេម កំពុង​ឈឺក្បាល​ជាមួយ​នឹង​អ្នក​លេង​បណ្ដាញ​សង្គម​ Facebook ដែល​បាន​យក​ឈ្មោះ និង​រូប​ថត​ពួកគេ​ទៅ​ដាក់​ជា​Profile ដើម្បី​ទទួល​បាន​ការ​ចាប់​អារម្មណ៍។</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrIiBQoUfEU35PJVqVkUjf4t1eMckeiOw88Q&s" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>តារាហូលីវូដលោកស្រី Angelina Jolie ប្តេជ្ញាចូលរួមផ្សព្វផ្សាយសក្តានុពលទេសចរណ៍ដ៏អស្ចារ្យរបស់កម្ពុជា ទៅកាន់ពិភពលោក ស្របតាមទិសស្លោក ម្នាក់ៗជាផ្សព្វផ្សាយទេសចរណ៍កម្ពុជាម្នាក់!</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://image.thmeythmey.com/pictures/2020/10/23/ab__7_.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>តាំងពី​ការកកើត​ដំបូង រហូតមកដល់​សព្វថ្ងៃ​នេះ ស្ថានីយទូរទស្សន៍ CTN បាន​នាំមក​នូវ​ខ្សែភាពយន្ត​ភាគ​ខ្មែរ​រាប់រយ​រឿង ប្រកបដោយ​គុណភាព​ជា​ចម្បង ដែល​នេះ​ជា​ឆន្ទៈ​មួយ ដ៏​ធំ ក្នុងការ​ចូលរួមចំណែក​គាំទ្រ លើកស្ទួយ​វិស័យ​សិល្បៈ​ភាពយន្ត​ខ្មែរ ដើម្បី​ទទួលបាន​ភាពល្បីល្បាញ និង​ការគាំទ្រ​ពី​ទស្សនិកជន​។​</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://business-cambodia.com/cms/assets/ffa605e0-ceb6-442d-9587-5a24f797f466" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>ខ្សែភាពយន្តរបស់ប្រទេសកូរ៉េខាងត្បូងដែលមានចំណងជើងថា Exhuma ដែលមានតារាសម្តែងស្រីដ៏ល្បីឈ្មោះ ស្រស់សោភា ដើរជាតួឯកគឺអ្នកនាង Kim Go-eun ហាក់មានភាពល្បីល្បាញខ្លាំងនាមួយរយៈចុងក្រោយ និងធ្វើឱ្យខ្សែភាពយន្តនេះអាចទាញចំណូលបានប្រមាណ ៩៣.១លានដុល្លារ នៅជុំវិញពិភពលោក ព្រមទាំងក្លាយជាភាពយន្តកូរ៉េខាងត្បូងដែលរកចំណូលបានខ្ពស់បំផុតក្នុងឆ្នាំ ២០២៤ ។</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://image.thmeythmey.com/pictures/2020/10/23/thumnail.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>តាំងពី​ការកកើត​ដំបូង រហូតមកដល់​សព្វថ្ងៃ​នេះ ស្ថានីយទូរទស្សន៍ CTN បាន​នាំមក​នូវ​ខ្សែភាពយន្ត​ភាគ​ខ្មែរ​រាប់រយ​រឿង ប្រកបដោយ​គុណភាព​ជា​ចម្បង ដែល​នេះ​ជា​ឆន្ទៈ​មួយ ដ៏​ធំ ក្នុងការ​ចូលរួមចំណែក​គាំទ្រ លើកស្ទួយ​វិស័យ​សិល្បៈ​ភាពយន្ត​ខ្មែរ</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://cdn.cambonomist.com/media/images/IMG_4709.original.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>សង្ក្រាន្តឆ្នាំថ្មី ចំណាយជិត ១ លានដុល្លារ លើកស្ទួយវប្បធម៌ប្រពៃណីខ្មែរដ៏ល្អផូរផង់ពី ខ្មែរ ប៊ែវើរីជីសកាន់តែប្លែកភ្នែក ប្លែកអារម្មណ៍ លើកស្ទួយវប្បធម៌ ប្រពៃណីខ្មែរដ៏ល្អផូរផង់!</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDj3KsU7nO8FYN3KnCCWCk20B8bsiehTDWDQ&s" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>តារាសម្តែង៤ប្រទេស ថៃ កម្ពុជា វៀតណាម និង មីយ៉ាន់ម៉ាជួបគ្នាក្នុងរឿង”ប្រុសលក់ខ្លួន”ភ្នំពេញ៖ ក្រោយពីប្រកាសបើកបង្ហាញមុខតារាសម្តែងប្រុសមីយ៉ាន់ម៉ា Paing Takhon មកថតភាពយន្តរឿង”ប្រុសលក់ខ្លួន” រួចមក ពេលនេះភាពយន្តនេះបានបញ្ចេញតារាសម្តែងបរទេស២ប្រទេស</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://s4.kh1.co/__image/w=1200,h=630,q=100/07/07d137639ccf36ddcbec41e7132b61af01962c9f.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>មកស្គាល់តារាសម្តែងស្រី ៣រូប ដែលទទួលបានការចាប់អារម្មណ៍ខ្លាំង ទាំងខ្សែភាពយន្ត និងរឿងភាគ</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk6dwvTHzSChT68H7N5DEVSFUpbRB7to1F-g&s" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>តារាសម្តែងវ័យក្មេងល្បីៗប៉ុន្មានដួងនេះ កំពុងលេចមុខរួមគ្នាក្នុងរឿងភាគថ្មីរបស់ទូរទស្សន៍ហង្សមាស</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://image.thmeythmey.com/pictures/2026/03/27/thumb2/image_69c6554ed5cd9.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>ភ្នំពេញ​៖ កំពូល​តារាភាពយន្ត​នៃ​ស្ថានីយទូរទស្សន៍​ហុងកុង TVB  កញ្ញា Nancy Wu និង​លោក Vincent Wong បានធ្វើ​ដំណើរ​មកកាន់​រាជធានី​ភ្នំពេញ​កាលពី​រសៀល​ថ្ងៃទី ១៨ មិថុនា​ម្សិលមិញ​សម្រាប់​កម្មវិធី​អ្នក​ដែលមាន​មុខមាត់​ដូច ឬ​ស្រដៀង​តារា​ទាំងពីរ​នៅលើ​កញ្ចក់​ទូរទស្សន៍ PNN </h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://image.freshnewsasia.com/2020/id-155/fn-2021-02-19-14-42-48-0.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>តារាសម្ដែងកំពុងមានប្រជាប្រិយភាព ក្នុងស្រទាប់យុវវ័យលោក ប្រុស ខួច ឈានចូលមកដល់ដើមឆ្នាំ១០២១នេះ លោកហាក់បីដូចជាកាក់កបនឹងការងារសិល្បៈឡើងវិញ ដោយមានឱកាស គ្រងបានតំណែងជាតួឯកជាបន្តបន្ទាប់។ ជាស្ដែងនៅថ្ងៃនេះលោកស្រាប់តែក្ដាប់បាន</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9IFrCIXbXoOZxc6nlQuTf3N99-E0P9rhwMQ&s" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>ប្រិយមិត្តច្បាស់ជាជ្រាបរួចមកហើយថា កញ្ញា ប៉ុន សុរ៉ាវត្តី ទទួលជ័យលាភីក្លាយជា កញ្ញាឯកភពផែនដីកម្ពុជា ឆ្នាំ២០២០ (Miss Planet Cambodia) ដោយសារតែមានសមត្ថភាព និងរូបសម្រស់ស្រស់សោភា។ បន្ទាប់ពីទទួលជ័យលាភីបវកញ្ញារូបនេះ</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4cExAKfyIFsMfto5RmrD5DxBVZDiugPlpeA&s" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>ខ្សែភាពយន្តហូលីវូដថ្មីមួយ ដែលនឹងមានតារាសម្តែងជាជនជាតិខ្មែរចូលសម្តែង</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://i.ytimg.com/vi/YgH28kno1b0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCPiPFeVkbuxJU4Uy2kq5wdobroaQ" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>ពរជ័យហង្សមាស | សុគន្ធកញ្ញា - ស្រីខួច - សុភ័ក្ត្រ - រតនៈ - ចាន់កញ្ញា |សួស្តីឆ្នាំថ្មី | MV | RHM - YouTube</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://business-cambodia.com/cms/assets/824882c6-6ee2-448d-9957-d86daa760c4a?format=webp" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>កាលពីថ្ងៃទី07 កក្កដា​ ឆ្នាំ2023 រោងភាពយន្ត​នាំមុខគេ​ និង​មាន​សាខា​ច្រើន​ជាង​គេបំផុតនៅកម្ពុជា គឺរោងភាពយន្ត​ លេជេន បាន​ប្រារព្ធ​កម្មវិធីខួបគម្រប់​12ឆ្នាំរបស់ខ្លួន នៅរោងភាពយន្ត​ លេជេនព្រីមៀម</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://popular.com.kh/wp-content/uploads/2024/11/1549.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>តារាសម្ដែងវ័យក្មេង សរពេជ្ញ ម៉ានីកា បង្ហើបពីភាពយន្តខ្នាតធំដែលនាងសម្ដែងជាមួយជនជាតិជប៉ុន ៥ ឆ្នាំមុន ត្រៀមចាក់បញ្ចាំងឆាប់ៗ</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://image.freshnewsasia.com/2020/id-126/fn-2020-05-30-10-43-33-4.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>មកដឹងពីជីវិតតារាស្រីជើងចាស់ទាំង១០រូប ធ្លាប់ល្បីល្បាញ ក្នុងទសវត្សរ៍ទី៨០-៩០, តើបច្ចុប្បន្នទៅជាយ៉ាងណាហើយ?</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://image.freshnewsasia.com/2020/id-126/fn-2020-05-30-10-43-33-1.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>ទោះបីសិល្បករ-សិល្បការិនីជំនាន់ក្រោយ បានរះឡើងជាបន្តបន្ទាប់ក្តីតែស្នាដៃ និងកេរ្តិ៍ឈ្មោះរបស់តារាជើងចាស់ កាលពីជំនាន់ទសវត្សរ៍ ៨០-៩០ នៅតែស្ថិតក្នុងក្រអៅបេះដូងអ្នកគាំទ្រជានិច្ច។ </h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://khmernote.com.kh/wp-content/uploads/2022/02/photo_2022-02-22_11-43-23-5.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>ចំណងដៃថ្មីមួយទៀត ដែលស្ថានីយទូរទស្សន៍ភីអិនអិន បានត្រៀមរួចរាល់ជាស្រេចក្នុងការផ្តល់ជូនជាចំណីចក្ខុបម្រើអារម្មណ៍ទស្សនិកជននោះគឺ តាមរយៈការពាំនាំយកនូវខ្សែភាពយន្តភាគខ្មែរក្នុងរឿង បាបស្នេហ៍អតីត។ </h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://cnc.com.kh/news/laravel-filemanager/photos/6/5fabc7f72f588.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>កម្សាន្ត៖ ថ្មីៗនេះ ស្ថានីយទូរទស្សន៍ CTN បានរៀបចំពិធីក្រុងពលីដ៏ធំ សម្រាប់ការផលិតរឿងភាគបុរាណខ្មែរថ្មីៗចំនួន ៥រឿង ដែលក្នុងកម្មវិធីក្រុងពលីនោះ ក៏មានវត្តមានថ្នាក់ដឹកនាំ នាយកប្រតិបត្តិរង ព្រមទាំងក្រុមការងារបុគ្គលិករបស់ក្រុមហ៊ុន CBS</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://news.btv.com.kh/uploads/blog/News/7797a6cbc500ac91b427db776798a933.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>អ្នកគាំទ្ររឿងខ្មែរ មានដឹងទេថាទូរទស្សន៍ហង្សមាសផលិតខ្សែភាពយន្តភាគខ្មែរបានប៉ុន្មានរឿងហើយ? - TNAOT</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://refile.tnaot.com/image/2020/02/16/a04e6a3e288f4e5ead708c99aefe3bdf.jpg" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>នាប៉ុន្មានឆ្នាំចុងក្រោយនេះវិស័យភាពយន្តហាក់កំពុងងើបឡើងវិញជាលំដាប់ ខណៈដែលកាលពីប៉ុន្មានឆ្នាំមុនត្រូវបានថមថយជាខ្លាំងស្របពេលដែលវិស័យសិល្បៈទាំងមូលនៅមិនទាន់ទទួលបានការគាំទ្រខ្លាំងដូចនាពេលបច្ចុប្បន្ន</h6></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="d-flex  p-2 gap-2 small-box ">
+            <div class="img bg-dark box" style="width:30%;height:150px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSORY5-Fm3AcjumJtmUEXmKnVy815Ypu7LpWg&s" style="width: 100%;height: 100%;"></div>
+            <div class="text " style="width:70%;height:150px;"><h6>តារាបូលីវុតដ៏ល្បី (តួសម្តែងជាព្រះពុទ្ធ) បានផ្ញើសារអំពីភាពសម្បូរបែបនៃទេសចរណ៍កម្ពុជា ជូនដល់ពិភពលោក</h6></div>
+          </div>
+        </div>
+      </div>
+      
+
+     
+    </div>
+
+   
+    <div class="col-lg-4 d-none d-md-block">
+      <div class="" style="height:900px;">
+         <div class="row h-100">
+                     <div class="d-flex flex-column gap-2">
+                        <div class="d-flex  p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREA1fdb46h5WxfNw1rdNeT2UvJH4Ktxk1hcw&s"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div class="" style="width: 80%; height: 50px;"><h6>មជ្ឈមណ្ឌលបច្ចេកវិទ្យាសហគមន៍ ពង្រឹងសមត្ថភាពជំនាញឌីជីថលដល់អ្នកជនបទ</h6>
+                         </div>
+
+                        </div>
+                        <div class="d-flex  p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://vstatic.vietnam.vn/vietnam/resource/IMAGE/2026/03/16/1773615218312_du_lich_campuchia_tran_an_du_khach.jpeg"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>កម្ពុជារៀបចំការប្រគំតន្ត្រី Kpop ដើម្បីធានាដល់ភ្ញៀវទេសចរ។</h6></div>
+                        </div>
+                        <div class="d-flex p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDMQT4MWhPEiNT1QKFd-e7AWrayRYOi_N2Pg&s"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>បទ ត្រគាកធំ របស់ពេជ្រ យ៉ាណូ សម្តែងដោយតារាស្រីល្បីៗនោះ ចេញ MVហើយ | សារព័ត៌មាន នគរវត្ត</h6></div>
+                        </div>
+                        <div class="d-flex  p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThq6C37LZuCsWu439RsM7w235v_TG43nMDMw&s"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>ស្អាតណាស់! ៧សន្លឹកក្នុងអាងហែលទឹកពី សេង រដ្ឋា ជាមួយ លីវ ជីលី! - កម្សាន្ត</h6></div>
+                        </div>
+                        <div class="d-flex  p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSijKr0C7WMib2af_XgY-3lO-m5DXMYH1_daA&s"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>ភាពយន្តឯកសារអំពីសិល្បករសម្តែងសៀកខ្មែរពីររូបគ្រោងនឹងចាក់បញ្ចាំងជាលើកដំបូង</h6></div>
+                        </div>
+                        <div class="d-flex  p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://www.oknha.news/wp-content/uploads/2020/02/86754906_193086685240302_1581883987519864832_n.jpg"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>តារា​ស្រី​ មាន​មុខ​ស្រ​ដៀង​ជំទាវ ស្រីតូច ចំណាន រៀបការ​ជា​មួយ​ឯកឧត្ដម​​វ័យ​ក្មេង​ម្នាក់​​ ដែល​សមាជិក​​ក្រុម​លេខា​​</h6></div>
+                        </div>
+                        <div class="d-flex  p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBp7oYSArDiS4OlVoo5OPBg5zHZW5rtPpdQA&s"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>ប្រជាជនខ្មែរថតរូបអាពាហ៍ពិពាហ៍នៅប្រាសាទអង្គរវត្តខ្មែរ ពិតជាមានភាពស្រស់ស្អាតណាស់ សៀមរាប កម្ពុជា</h6></div>
+                        </div>
+                        <div class="d-flex p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4cExAKfyIFsMfto5RmrD5DxBVZDiugPlpeA&s"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>ខ្សែភាពយន្តហូលីវូដថ្មីមួយ ដែលនឹងមានតារាសម្តែងជាជនជាតិខ្មែរចូលសម្តែង</h6></div>
+                        </div>
+                        <div class="d-flex  p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVxsr_0MVgG4JeIgJ22SfZl_19fBEaj9vuUA&s"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>តារាហូលីវូដលោកស្រី Angelina Jolie ប្តេជ្ញាចូលរួមផ្សព្វផ្សាយសក្តានុពលទេសចរណ៍ដ៏អស្ចារ្យរបស់កម្ពុជា ទៅ</h6></div>
+                        </div>
+                        <div class="d-flex p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGt6rC2a5bKV-TvSByfbqRbsO1YycfWqZ57Q&s"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>សាស្ត្រាចារ្យ ព្រឿង ឈៀង៖ យើងត្រៀមទស្សនីយភាពបើកស៊ីហ្គេមកម្ពុជា តាំងពីឆ្នាំ ២០២០</h6></div>
+                        </div>
+                        <div class="d-flex  p-2 gap-2">
+                         <div class="bg-dark box" style="width: 20%; height: 50px;">
+                          <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2WyPZKyw8YvMpInMyhCTFV839O8va4Eqcyg&s"style="width: 100%; height: 100%; object-fit: cover;">
+                         </div>
+                         <div  style="width: 80%; height: 50px;"><h6>លោក សម រង្ស៊ី ​ជំរុញ​ឱ្យ​មាន​មហា​សាមគ្គី​កម្លាំង​រវាង​ពលរដ្ឋ​ខ្មែរ ​នៅ​ក្រៅ​​និង​ក្នុង​ប្រទេស​ហើយ​ព្រមាន​ពី​ហានិភ័យ​នៃ​</h6></div>
+                        </div>
+                        
+                        
+                      </div>
+                </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="container-fluid " style="height:380px; background:#000;color: #fff;">
+  <div class="row h-100">
+    <div class="col-lg-4 col-12 d-flex flex-column justify-content-center align-items-center">
+      <img src="./photo_2026-04-03_09-57-54.jpg" style="max-width:130px;">
+      <h6>© រក្សាសិទ្ធគ្រប់យ៉ាងដោយSabay ឆ្នាំ២០២៦ <br> គោលការណ៍ភាព| Privacy Policy  <br><br>
+         អាសយដ្ធាន <br> អគ្គាលេខ ៣០៨ មហាវិថីព្រះមុន្នីវង្ស <br>
+        សង្កាតបឹងរាំង ខណ្ឌដូនពេញ</h6>
+    </div>
+  
+     <div class=" col-lg-4  d-none d-lg-flex justify-content-center align-items-center text-white text-center ">
+      <div>
+        <h5>អំពីយើង</h5>
+        <h6>Sabay Digital Corporation ជាក្រុមហុនព័ត៏មានឌីជីថល <br> និនកម្សាន្តឈានមុខគេ នៅកម្ពុជា ។ ព័ត៏មានបន្ថែម <br>
+        ផលិតផល និង សេវាកម្ម របស់Sabay</h6>
+        <img src="https://news.sabay.com.kh/img/logo.png"style="width: 40px;height: 40px;">
+        <img src="https://media-src.sabay.com/mysabay_user/logo_picture/1764651755559-pm31sd9.png"style="width: 40px;height: 40px;">
+        <img src="https://kleykley.sabay.com.kh/img/logo.png"style="width: 40px;height: 40px;">
+        <img src="https://der.sabay.com.kh/img/logo.png"style="width: 40px;height: 40px;">
+        <img src="https://cdn.sabay.com/cdn/media.sabay.com/media/publications/logos/61d5007946e0b_1641349200_small.png"style="width: 40px;height: 40px;">
+        <img src="https://cdn.sabay.com/cdn/media.sabay.com/media/publications/logos/61d501f25761a_1641349560_small.png"style="width: 40px;height: 40px;">
+        <img src="https://cdn.sabay.com/cdn/media.sabay.com/media/publications/logos/61d50338ea098_1641349920_small.png"style="width: 40px;height: 40px;">
+        <img src="https://business.sabay.com.kh/img/logo.png"style="width: 40px;height: 40px;">
+        <img src="https://cdn.sabay.com/cdn/media.sabay.com/media/publications/logos/61d4f62a95ade_1641346560_small.png"style="width: 40px;height: 40px;">
+      </div>
+    </div>
+    <div class="col-lg-4 col-12 d-flex justify-content-center align-items-center text-white text-center">
+      <div>
+       <h5>ជួបគ្នានៅបណ្ដាញសង្គម</h5>
+       <h6>ទំនាក់ទំនង</h6>
+       <i class="bi bi-facebook"></i>
+       <i class="bi bi-youtube"></i>
+       <i class="bi bi-instagram"></i>
+       <i class="bi bi-tiktok"></i>
+       <i class="bi bi-telegram"></i>
+       <h6>info@sabay.com</h6>
+       <h6>023 228 000</h6>
+      </div>
+    </div>
+
+  </div>
+</div>
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("show");
+}
+</script>
+</body>
+</html>
